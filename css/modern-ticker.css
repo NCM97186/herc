@@ -1,0 +1,32 @@
+@charset "utf-8";
+.modern-ticker {width:100%;padding:0px;font-size:12px;position:relative;overflow:hidden; min-height:0px; float:left;}
+.modern-ticker a {text-decoration:none}
+.modern-ticker ul {margin:0;padding:0;list-style:none}
+.mt-round {border-radius:7px}
+.mt-label {margin-right:2px;padding:0 8px 0 12px;float:left}
+.mt-news {height:100%;overflow:hidden;float:left}
+.mt-scroll .mt-news {background-color:transparent}
+.mt-round .mt-news:first-child, .mt-round .mt-news:first-child a {border-top-left-radius:5px;border-bottom-left-radius:5px}
+.mt-round .mt-news:last-child, .mt-round .mt-news:last-child a {border-top-right-radius:5px;border-bottom-right-radius:5px;}
+.mt-scroll.mt-round .mt-news a {border-radius:0; font-size:11px; padding:3px; color:#FFFFFF;}
+.mt-news ul {width:50000px;background-repeat:no-repeat;background-position:-1000px;}
+.mt-news li {float:left; padding:5px 5px 5px 0px;margin-right:0px; background-repeat:no-repeat;background-position:0px center;display:block}
+.mt-hide {display:none}
+.mt-controls {margin-left:2px;height:100%;position:absolute;right:2px;background-repeat:no-repeat;background-position:-1000px}
+.mt-play, .mt-prev, .mt-next {width:30px;height:30px;background-repeat:no-repeat;background-position:center;cursor:pointer;float:left}
+.mt-round .mt-next {border-radius:0 5px 5px 0}
+.modern-ticker {background-color: #fafafa;}
+.mt-label {background-color: #0099ff;}
+.mt-news {}
+
+.mt-news a {color: #fff;background-color: #888888;}
+.mt-news a:hover {text-decoration:underline;}
+.mt-news a:active {background-color: #0077ff;}
+.mt-controls {background-image: url("../images/pause.png");}
+.mt-prev, .mt-next {background-color: #0099ff;}
+.mt-prev {background-image: url(../images/prev-icon.png);}
+.mt-next {background-image: url(../images/next-icon.png);}
+.mt-play {background-color: #00bbff;background-image: url("../images/play.png");}
+.mt-pause {background-image: url("../images/pause.png");}
+.mt-play:hover, .mt-prev:hover, .mt-next:hover {background-color: transparent}
+.mt-play:active, .mt-prev:active, .mt-next:active {background-color: #ff4400;}

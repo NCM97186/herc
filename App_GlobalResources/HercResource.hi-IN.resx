@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error" xml:space="preserve">
+    <value>त्रुटि</value>
+  </data>
+  <data name="External_Links" xml:space="preserve">
+    <value>बाह्य लिंक</value>
+  </data>
+  <data name="Font_Decrease" xml:space="preserve">
+    <value>पाठ्य का आकार घटाए</value>
+  </data>
+  <data name="Font_Increase" xml:space="preserve">
+    <value>पाठ्य का आकार बढ़ाए</value>
+  </data>
+  <data name="Font_Normal" xml:space="preserve">
+    <value>सामान्य पाठ्य आकार</value>
+  </data>
+  <data name="FooterText_content" xml:space="preserve">
+    <value>© इसके विषयवस्तु का स्वामित्व और</value>
+  </data>
+  <data name="FooterText_site" xml:space="preserve">
+    <value>साइट की संकल्पना, विकास और होस्टिंग:</value>
+  </data>
+  <data name="Footer_by" xml:space="preserve">
+    <value>द्वारा किया जाता है।</value>
+  </data>
+  <data name="GovtOf" xml:space="preserve">
+    <value>हरियाणा सरकार</value>
+  </data>
+  <data name="Grievance" xml:space="preserve">
+    <value>शिकायत</value>
+  </data>
+  <data name="HightContrast" xml:space="preserve">
+    <value>उच्‍च वैषम्‍य दृश्‍य</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>मुख पृष्ठ</value>
+  </data>
+  <data name="HomePage1" xml:space="preserve">
+    <value>मुख पृष्ठ</value>
+  </data>
+  <data name="IndianPortal" xml:space="preserve">
+    <value>भारतीय पोर्टल</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>अंग्रेजी</value>
+  </data>
+  <data name="Lang_Id" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LastUpdated" xml:space="preserve">
+    <value>अंतिम नवीनीकृत</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>अधिक</value>
+  </data>
+  <data name="NIC" xml:space="preserve">
+    <value>राष्ट्रीय सूचना विज्ञान</value>
+  </data>
+  <data name="ReadMore" xml:space="preserve">
+    <value>अधिक पढ़ें</value>
+  </data>
+  <data name="ScreenReaderAccess" xml:space="preserve">
+    <value>स्क्रीन रीडर का उपयोग</value>
+  </data>
+  <data name="SkipToMainContent" xml:space="preserve">
+    <value>मुख्‍य सामग्री पर जाए</value>
+  </data>
+  <data name="StandardContrast" xml:space="preserve">
+    <value>मानक दृश्‍य</value>
+  </data>
+  <data name="Theme_Blue" xml:space="preserve">
+    <value>नीला दृश्‍य</value>
+  </data>
+  <data name="Theme_Green" xml:space="preserve">
+    <value>हरा दृश्‍य</value>
+  </data>
+  <data name="Theme_Orange" xml:space="preserve">
+    <value>नारंगी दृश्‍य</value>
+  </data>
+  <data name="WebsiteTitle" xml:space="preserve">
+    <value>हरियाणा विद्युत विनियामक आयोग</value>
+  </data>
+  <data name="YouAreHere" xml:space="preserve">
+    <value>आप यहाँ हैं :</value>
+  </data>
+  <data name="News_Announcement" xml:space="preserve">
+    <value>समाचार और घोषणाएं</value>
+  </data>
+  <data name="PageUrl" xml:space="preserve">
+    <value>content/Hindi/</value>
+  </data>
+  <data name="PhotoGallery" xml:space="preserve">
+    <value>फोटो गैलरी</value>
+  </data>
+  <data name="DailyOrders" xml:space="preserve">
+    <value>दैनिक / अंतरिम आदेश </value>
+  </data>
+  <data name="DDPapers" xml:space="preserve">
+    <value>प्रारूप / विचारणीय दस्तावेज</value>
+  </data>
+  <data name="herc" xml:space="preserve">
+    <value>एच ई आर सी</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>अधिसूचनाएं</value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>अन्य</value>
+  </data>
+  <data name="RepealedNotifications" xml:space="preserve">
+    <value>निरसित अधिसूचनाएं</value>
+  </data>
+  <data name="Abbreviations" xml:space="preserve">
+    <value>लघुरूप</value>
+  </data>
+  <data name="Aboutus" xml:space="preserve">
+    <value>हमारे बारे में</value>
+  </data>
+  <data name="AboutOmbudsman" xml:space="preserve">
+    <value>हमारे बारे में</value>
+  </data>
+  <data name="AnnualReports" xml:space="preserve">
+    <value>वार्षिक रिपोर्ट</value>
+  </data>
+  <data name="CategorywiseOrders" xml:space="preserve">
+    <value>श्रेणी वार आदेश</value>
+  </data>
+  <data name="CLSH" xml:space="preserve">
+    <value>सुनवाई की अनुसूची</value>
+  </data>
+  <data name="Commissioncalendar" xml:space="preserve">
+    <value>आयोग कैलेंडर</value>
+  </data>
+  <data name="CurrentYear" xml:space="preserve">
+    <value>वर्तमान वर्ष</value>
+  </data>
+  <data name="CurrentYearOrder" xml:space="preserve">
+    <value>वर्तमान वर्ष के आदेश</value>
+  </data>
+  <data name="CurrentYearPetitions" xml:space="preserve">
+    <value>वर्तमान वर्ष की याचिकाएं</value>
+  </data>
+  <data name="EditProfile" xml:space="preserve">
+    <value>प्रोफ़ाइल संपादित करें</value>
+  </data>
+  <data name="GovernmentofHaryana" xml:space="preserve">
+    <value>हरियाणा सरकार</value>
+  </data>
+  <data name="hercfullname" xml:space="preserve">
+    <value>रखरखाव एवं अद्यतनीकरण: हरियाणा विद्युत नियामक आयोग </value>
+  </data>
+  <data name="HERCMail" xml:space="preserve">
+    <value>एच ई आर सी ईमेल</value>
+  </data>
+  <data name="OnlineStatus" xml:space="preserve">
+    <value>ऑनलाइन स्थिति</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>आदेश</value>
+  </data>
+  <data name="OrdersSearch" xml:space="preserve">
+    <value>आदेश खोज</value>
+  </data>
+  <data name="OrdersunderAppeal" xml:space="preserve">
+    <value>अपील के तहत आदेश</value>
+  </data>
+  <data name="Petitions" xml:space="preserve">
+    <value>याचिका</value>
+  </data>
+  <data name="PetitionsSearch" xml:space="preserve">
+    <value>याचिका खोज</value>
+  </data>
+  <data name="PowerSectorLinks" xml:space="preserve">
+    <value>विद्युत क्षेत्र के लिंक</value>
+  </data>
+  <data name="PreviousYearOrder" xml:space="preserve">
+    <value>पूर्व वर्षों के आदेश</value>
+  </data>
+  <data name="PreviousYearPetitions" xml:space="preserve">
+    <value>पूर्व वर्षों की याचिकाएं</value>
+  </data>
+  <data name="PreviousYears" xml:space="preserve">
+    <value>पूर्व वर्ष</value>
+  </data>
+  <data name="PublicNotice" xml:space="preserve">
+    <value>सार्वजनिक सूचना</value>
+  </data>
+  <data name="PublicNoticeCurrent" xml:space="preserve">
+    <value>वर्तमान वर्ष सार्वजनिक सूचना</value>
+  </data>
+  <data name="RepealedOrders" xml:space="preserve">
+    <value>निरसित आदेश</value>
+  </data>
+  <data name="RepealedDailyOrders" xml:space="preserve">
+    <value>निरसित दैनिक आदेश</value>
+  </data>
+  <data name="SearchOrders" xml:space="preserve">
+    <value>आदेश खोज</value>
+  </data>
+  <data name="DailyOrdersSearch" xml:space="preserve">
+    <value>दैनिक आदेश खोज</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>साइन आउट</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>यूज़र नेम</value>
+  </data>
+  <data name="Visitor" xml:space="preserve">
+    <value>आगंतुक</value>
+  </data>
+  <data name="WhatNew" xml:space="preserve">
+    <value>नया क्या है</value>
+  </data>
+  <data name="Sitemap" xml:space="preserve">
+    <value>साइटमैप</value>
+  </data>
+  <data name="FooterLinks" xml:space="preserve">
+    <value>तल</value>
+  </data>
+  <data name="HomePageLeftMemu" xml:space="preserve">
+    <value>मुख पृष्ठ बाएं मेनू</value>
+  </data>
+  <data name="LastUpdated1" xml:space="preserve">
+    <value>नवीनीकृत</value>
+  </data>
+  <data name="CoOrdinationForum" xml:space="preserve">
+    <value>समन्वय फोरम</value>
+  </data>
+  <data name="Licensees" xml:space="preserve">
+    <value>लाईसैंसिस</value>
+  </data>
+  <data name="Ombudsman" xml:space="preserve">
+    <value>लोकपाल</value>
+  </data>
+  <data name="StateAdvisoryCommittee" xml:space="preserve">
+    <value>राज्य सलाहकार समिति</value>
+  </data>
+  <data name="SkiptoNavigation" xml:space="preserve">
+    <value>नेविगेशन पर जाए</value>
+  </data>
+  <data name="HaryanaPortal" xml:space="preserve">
+    <value>हरियाणा पोर्टल</value>
+  </data>
+  <data name="RighttoInformation" xml:space="preserve">
+    <value>सूचना का अधिकार</value>
+  </data>
+  <data name="OmbudsmanPageUrl" xml:space="preserve">
+    <value>OmbudsmanContent/Hindi/</value>
+  </data>
+  <data name="PubliceNoticeOld" xml:space="preserve">
+    <value>सार्वजनिक पुराने नोटिस</value>
+  </data>
+  <data name="Appeal" xml:space="preserve">
+    <value>अपील</value>
+  </data>
+  <data name="Currentyearappeals" xml:space="preserve">
+    <value>वर्तमान वर्ष की अपील</value>
+  </data>
+  <data name="Previousyeaappeals" xml:space="preserve">
+    <value>पूर्व वर्षों की अपील</value>
+  </data>
+  <data name="SearchAppeal" xml:space="preserve">
+    <value>अपील खोज</value>
+  </data>
+  <data name="RTI" xml:space="preserve">
+    <value>आर. टी. आई.</value>
+  </data>
+  <data name="CurrentYearApplications" xml:space="preserve">
+    <value>वर्तमान वर्ष के आवेदन</value>
+  </data>
+  <data name="PreviousYearApplications" xml:space="preserve">
+    <value>पिछले वर्ष के आवेदन</value>
+  </data>
+  <data name="ScheduleOfHearings" xml:space="preserve">
+    <value>सुनवाई की अनुसूची</value>
+  </data>
+  <data name="Regulations" xml:space="preserve">
+    <value>विनियम</value>
+  </data>
+  <data name="Standards" xml:space="preserve">
+    <value>मानक</value>
+  </data>
+  <data name="RepealedRegulations" xml:space="preserve">
+    <value>निरसित विनियम</value>
+  </data>
+  <data name="Codes" xml:space="preserve">
+    <value>संहिता</value>
+  </data>
+  <data name="RepealedCodes" xml:space="preserve">
+    <value>निरसित संहिता</value>
+  </data>
+  <data name="RepealedStandard" xml:space="preserve">
+    <value>निरसित मानक</value>
+  </data>
+  <data name="Policies" xml:space="preserve">
+    <value>नीतियाँ</value>
+  </data>
+  <data name="RepealedPolicies" xml:space="preserve">
+    <value>निरसित नीतियाँ</value>
+  </data>
+  <data name="Guidelines" xml:space="preserve">
+    <value>दिशानिर्देश</value>
+  </data>
+  <data name="RepealedGuidelines" xml:space="preserve">
+    <value>निरसित दिशानिर्देश</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="NameOfRegulation" xml:space="preserve">
+    <value>नियमों का नाम</value>
+  </data>
+  <data name="SerialNumber" xml:space="preserve">
+    <value>क्रम संख्या</value>
+  </data>
+  <data name="AwardsPronounced" xml:space="preserve">
+    <value>उद्घोषित निर्णय</value>
+  </data>
+  <data name="Currentyearawards" xml:space="preserve">
+    <value>वर्तमान वर्ष के निर्णय</value>
+  </data>
+  <data name="Previousyearawards" xml:space="preserve">
+    <value>पूर्व वर्षों के निर्णय</value>
+  </data>
+  <data name="AwardUnderAppeal" xml:space="preserve">
+    <value>अपील के तहत आदेश</value>
+  </data>
+  <data name="Searchapplication" xml:space="preserve">
+    <value>आवेदन खोज</value>
+  </data>
+  <data name="PreviousYearRti" xml:space="preserve">
+    <value>पूर्व वर्षों के आवेदन</value>
+  </data>
+  <data name="Tariff" xml:space="preserve">
+    <value>टैरिफ</value>
+  </data>
+  <data name="TariffDetails" xml:space="preserve">
+    <value>टैरिफ विवरण</value>
+  </data>
+  <data name="ConsumerEmpowerment" xml:space="preserve">
+    <value>उपभोक्ता सशक्तिकरण</value>
+  </data>
+  <data name="DistributionCharges" xml:space="preserve">
+    <value>वितरण एवं खुदरा आपूर्ति</value>
+  </data>
+  <data name="TransmissionCharges" xml:space="preserve">
+    <value>पारेषण एवं एस एल डी सी</value>
+  </data>
+  <data name="GenerationTariff" xml:space="preserve">
+    <value>उत्पादन </value>
+  </data>
+  <data name="WheelingCharges" xml:space="preserve">
+    <value>व्हीलिंग - वितरण प्रणाली</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>वर्तमान</value>
+  </data>
+  <data name="CurrentPublicNotice" xml:space="preserve">
+    <value>वर्तमान सार्वजनिक सूचनाएँ</value>
+  </data>
+  <data name="PreviousPublicNotice" xml:space="preserve">
+    <value>पुरानी सार्वजनिक सूचनाएँ</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>पिछला</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>रूपरेखा</value>
+  </data>
+  <data name="Profileprev" xml:space="preserve">
+    <value>पूर्व विद्युत लोकपाल</value>
+  </data>
+  <data name="Profiledetails" xml:space="preserve">
+    <value>रूपरेखा विवरण</value>
+  </data>
+  <data name="Renewal" xml:space="preserve">
+    <value>अक्षय ऊर्जा</value>
+  </data>
+  <data name="Cross" xml:space="preserve">
+    <value>क्रॉस सब्सिडी तथा अतिरिक्त अधिभार</value>
+  </data>
+  <data name="FSA" xml:space="preserve">
+    <value>एफ एस ए</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>विवरण</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>संपर्क करें</value>
+  </data>
+  <data name="LocateUs" xml:space="preserve">
+    <value>हमसे संपर्क करें</value>
+  </data>
+  <data name="GeneralMiscCharges" xml:space="preserve">
+    <value>सामान्य तथा विविध प्रभार</value>
+  </data>
+  <data name="profileofCurrentMembers" xml:space="preserve">
+    <value>वर्तमान अध्यक्ष और सदस्यों की रूपरेखा देखने के लिए यहां क्लिक करें</value>
+  </data>
+  <data name="profileofFormerMembers" xml:space="preserve">
+    <value>पूर्व अध्यक्षों और सदस्यों की रूपरेखा देखने के लिए यहां क्लिक करें</value>
+  </data>
+  <data name="profileofCurrentOmbudsmenMembers" xml:space="preserve">
+    <value>वर्तमान विद्युत लोकपाल की रूपरेखा देखने के लिए यहां क्लिक करें</value>
+  </data>
+  <data name="profileofFormerOmbudsmenMembers" xml:space="preserve">
+    <value>पूर्व विद्युत लोकपाल की रूपरेखा देखने के लिए यहां क्लिक करें</value>
+  </data>
+  <data name="FAA" xml:space="preserve">
+    <value>FAA</value>
+  </data>
+  <data name="SAA" xml:space="preserve">
+    <value>SAA</value>
+  </data>
+  <data name="RTICurrent" xml:space="preserve">
+    <value>वर्तमान वर्ष के आवेदन</value>
+  </data>
+  <data name="RTIPrevious" xml:space="preserve">
+    <value>पूर्व वर्षों के आवेदन</value>
+  </data>
+  <data name="CurrentPetition" xml:space="preserve">
+    <value>वर्तमान वर्ष की याचिकाएं</value>
+  </data>
+  <data name="PreviousPetition" xml:space="preserve">
+    <value>पूर्व वर्षों की याचिकाएं</value>
+  </data>
+  <data name="AwardSearch" xml:space="preserve">
+    <value>Award Search </value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>खोजें</value>
+  </data>
+  <data name="Lang" xml:space="preserve">
+    <value>hi</value>
+  </data>
+  <data name="NoScriptBrowser" xml:space="preserve">
+    <value>इस वेबसाइट को अछे मापदंड में देखने के लिए आपको अपना ब्राउजर जावास्क्रिप्ट योग्य बनाना होगा | ऐसा प्रतीत हो रहा है कि आपका ब्राउजर जावास्क्रिप्ट में सक्षम नहीं है | अछे मापदंड के लिए, अपने ब्राउजर को जावास्क्रिप्ट योग्य बनावें |</value>
+  </data>
+  <data name="policiesGuidelines" xml:space="preserve">
+    <value>नीतियाँ और दिशानिर्देश</value>
+  </data>
+  <data name="old" xml:space="preserve">
+    <value>पुराने</value>
+  </data>
+  <data name="oldVacancy" xml:space="preserve">
+    <value>पुरानी</value>
+  </data>
+  <data name="Vacancies" xml:space="preserve">
+    <value>रिक्तियाँ</value>
+  </data>
+  <data name="OmbudsmanCalendar" xml:space="preserve">
+    <value>लोकपाल कैलेंडर</value>
+  </data>
+  <data name="ApplicationSearch" xml:space="preserve">
+    <value>आवेदन खोज</value>
+  </data>
+  <data name="AwardsSearch" xml:space="preserve">
+    <value>निर्णय खोज</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>रिपोर्ट</value>
+  </data>
+  <data name="Dated" xml:space="preserve">
+    <value>दिनांक :</value>
+  </data>
+  <data name="CurrentAnnualReport" xml:space="preserve">
+    <value>वर्तमान वार्षिक रिपोर्ट</value>
+  </data>
+  <data name="OldAnnualReport" xml:space="preserve">
+    <value>पूर्व वार्षिक रिपोर्ट</value>
+  </data>
+  <data name="CurrentVacancies" xml:space="preserve">
+    <value>वर्तमान रिक्तियाँ</value>
+  </data>
+  <data name="OldVacancies" xml:space="preserve">
+    <value>पूर्व रिक्तियाँ</value>
+  </data>
+  <data name="CurrentDraftDisscussionPaper" xml:space="preserve">
+    <value>वर्तमान प्रारूप / विचारणीय दस्तावेज</value>
+  </data>
+  <data name="OldDraftDisscussionPaper" xml:space="preserve">
+    <value>पूर्व प्रारूप / विचारणीय दस्तावेज</value>
+  </data>
+  <data name="profileHeading" xml:space="preserve">
+    <value>पूर्व विद्युत लोकपाल की प्रोफाइल विवरण</value>
+  </data>
+  <data name="profileHercDetails" xml:space="preserve">
+    <value>पूर्व अध्यक्ष और सदस्य</value>
+  </data>
+  <data name="currentReviewPetitions" xml:space="preserve">
+    <value>वर्तमान वर्ष की रिव्यु याचिकाएं</value>
+  </data>
+  <data name="CurrentYearAppealPetition" xml:space="preserve">
+    <value>वर्तमान वर्ष की अपील के तहत याचिकाएं</value>
+  </data>
+  <data name="CurrentYearApplicationsFAA" xml:space="preserve">
+    <value>वर्तमान वर्ष के आवेदन-  एफ ए ए</value>
+  </data>
+  <data name="CurrentYearApplicationsSAA" xml:space="preserve">
+    <value>वर्तमान वर्ष के आवेदन-  एस ए ए</value>
+  </data>
+  <data name="PreviousYearApplicationsFAA" xml:space="preserve">
+    <value>पूर्व वर्षों के आवेदन-  एफ ए ए</value>
+  </data>
+  <data name="PreviousYearApplicationsSAA" xml:space="preserve">
+    <value>पूर्व वर्षों के आवेदन - एस ए ए</value>
+  </data>
+  <data name="PreviousYearPetitionsAppeal" xml:space="preserve">
+    <value>पिछले वर्षों की अपील के तहत याचिकाएं</value>
+  </data>
+  <data name="PreviousYearPetitionsReview" xml:space="preserve">
+    <value>पिछले वर्षों की रिव्यु याचिकाएं</value>
+  </data>
+  <data name="nationalemblem" xml:space="preserve">
+    <value>राष्ट्रीय चिह्न</value>
+  </data>
+  <data name="EnterYourKeywords" xml:space="preserve">
+    <value>अपने खोजशब्द लिखें</value>
+  </data>
+  <data name="Archive" xml:space="preserve">
+    <value>संग्रह</value>
+  </data>
+  <data name="WebsiteTitleOmbudsman" xml:space="preserve">
+    <value>विद्युत लोकपाल</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>अद्यतन: </value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>पिछले</value>
+  </data>
+  <data name="ClickHereToViewDetails" xml:space="preserve">
+    <value>विवरण देखने के लिए यहां क्लिक करें</value>
+  </data>
+  <data name="Leftlinks" xml:space="preserve">
+    <value>बाएं के लिंक</value>
+  </data>
+  <data name="MiddleLinks" xml:space="preserve">
+    <value>मध्य के लिंक</value>
+  </data>
+  <data name="Orderlinks" xml:space="preserve">
+    <value>आदेश लिंक</value>
+  </data>
+  <data name="Petitionlinks" xml:space="preserve">
+    <value>याचिका लिंक</value>
+  </data>
+  <data name="Toplinks" xml:space="preserve">
+    <value>शीर्ष लिंक</value>
+  </data>
+  <data name="ViewOmbudsmanSitemap" xml:space="preserve">
+    <value>लोकपाल साइटमैप देखें</value>
+  </data>
+  <data name="ViewSitemap" xml:space="preserve">
+    <value>एच ई आर सी साइटमैप देखें</value>
+  </data>
+  <data name="ViewDocument" xml:space="preserve">
+    <value>दस्तावेज देखें</value>
+  </data>
+  <data name="googleSearch" xml:space="preserve">
+    <value>खोजें</value>
+  </data>
+  <data name="NoDataAvailable" xml:space="preserve">
+    <value>No data available</value>
+  </data>
+  <data name="imagetoplay" xml:space="preserve">
+    <value>Image to Play</value>
+  </data>
+  <data name="imagetostop" xml:space="preserve">
+    <value>Image to Stop</value>
+  </data>
+  <data name="DialGov" xml:space="preserve">
+    <value>dial.gov.in</value>
+  </data>
+  <data name="Nextyear" xml:space="preserve">
+    <value>अगले वर्ष</value>
+  </data>
+<data name="FooterText_site_upper" xml:space="preserve">
+    <value>वेबसाइट नोडल अधिकारी: श्री ऋषि परवन्दा, सिस्टम मैनेजर (0172-2590869)</value>
+  </data>
+</root>

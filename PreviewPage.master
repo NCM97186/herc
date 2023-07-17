@@ -1,0 +1,200 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PreviewPage.master.cs" Inherits="PreviewPage" %>
+
+<%@ Register Src="~/UserControl/Search.ascx" TagName="Search" TagPrefix="ucSearch" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="Ajax" %>
+<%@ Register Src="UserControl/accessibility.ascx" TagName="accessibility" TagPrefix="uc1" %>
+<%@ Register Src="~/UserControl/hercnavigation.ascx" TagName="navigation" TagPrefix="uc1" %>
+<%@ Register Src="~/UserControl/hercfooter.ascx" TagName="Footer" TagPrefix="uc1" %>
+<%@ Register Src="~/UserControl/BannerControl.ascx" TagName="BannerImage" TagPrefix="ucBanner" %>
+<%@ Register Src="UserControl/leftmenu_Homepage.ascx" TagName="leftmenu_Homepage"
+    TagPrefix="uc2" %>
+<%@ Register Src="~/UserControl/homepage_logo.ascx" TagName="homepage_logo" TagPrefix="uc2" %>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= Resources.HercResource.Lang %>"
+lang="<%= Resources.HercResource.Lang %>">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to Haryana Electricity Regulatory Commission</title>
+    <link href="css/layout.css" rel="stylesheet" type="text/css"  />
+    <%-- <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />--%>
+
+    <script type="text/javascript" src="<%# ResolveUrl("~/js/menu_01.js")%>"></script>
+
+    <script type="text/javascript" src="<%# ResolveUrl("~/js/menu-hover.js") %>"></script>
+
+    <script type="text/javascript" src="<%# ResolveUrl("~/js/menu.js") %>"></script>
+
+    <script type="text/javascript" src="<%# ResolveUrl("~/js/left-nav-01.js") %>"></script>
+
+    <script type="text/javascript" src="<%# ResolveUrl("~/js/animatedcollapse.js") %>"></script>
+
+    <script type="text/javascript">
+
+        // initialise plugins
+        jQuery(function () {
+            jQuery('ul.sf-menu').superfish();
+        });
+
+    </script>
+
+    <noscript class="noScript">
+    </noscript>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <Ajax:ToolkitScriptManager runat="server" ID="ScriptManager" EnablePartialRendering="true" />
+    <div class="wrapper">
+        <div class="header-holder" id="headerDiv" runat="server">
+            <div class="top-strip">
+                <div class="top-strip-holder">
+                    <div class="accessibility_option" id="AccessibilityDiv" runat="server">
+                        <uc1:accessibility ID="accessibility1" runat="server" />
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="logo-holder">
+                <div class="left-logo">
+                    <%if (Resources.HercResource.Lang_Id == "1")
+                      {%>
+                    <a href="<%=ResolveUrl("~/")%>index.aspx">
+                        <img src="<%=ResolveUrl("~/images/logo.png") %>" width="97" height="105" alt="<%=Resources.HercResource.WebsiteTitle %>"
+                            title="<%=Resources.HercResource.WebsiteTitle %>" /></a>
+                    <%}
+                      else
+                      {%>
+                    <a href="<%=ResolveUrl("~/")%>content/Hindi/index.aspx">
+                        <img src="<%=ResolveUrl("~/images/logo.png") %>" width="97" height="105" alt="<%=Resources.HercResource.WebsiteTitle %>"
+                            title="<%=Resources.HercResource.WebsiteTitle %>" /></a>
+                    <%} %>
+                </div>
+                <div class="header-text">
+                    <%if (Resources.HercResource.Lang_Id == "1")
+                      {%>
+                    <img src="<%=ResolveUrl("~/images/header-text.png") %>" width="480" height="75" alt="<%=Resources.HercResource.WebsiteTitle %>"
+                        title="<%=Resources.HercResource.WebsiteTitle %>" />
+                    <%}
+                      else
+                      {%>
+                    <img src="<%=ResolveUrl("~/images/header-textHindi.png") %>" width="480" height="75"
+                        alt="<%=Resources.HercResource.WebsiteTitle %>" title="<%=Resources.HercResource.WebsiteTitle %>" />
+                    <%} %>
+                </div>
+                <div class="national-logo">
+                    <img src="<%=ResolveUrl("~/images/national-logo-.png") %>" width="60" height="94"
+                        alt="<%=Resources.HercResource.nationalemblem %>" title="<%=Resources.HercResource.nationalemblem %>" /></div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="top-small-nav" id="topRightMenu" runat="server">
+                <div class="top-small-left-curve">
+                </div>
+                <div class="top-small-link-holder" >
+                    <div class="top-small-links" >
+                        <ul>
+                            <li class="div-line-none">
+                                <%if (Resources.HercResource.Lang_Id == "1")
+                                  {%>
+                                <a href='<%=Page.ResolveUrl("~/AnnualReport.aspx")%>' title='<%=Resources.HercResource.AnnualReports %>'>
+                                    <%=Resources.HercResource.AnnualReports %></a>
+                                <%}
+                                  else
+                                  {%>
+                                <a href='<%=Page.ResolveUrl("~/Content/Hindi/AnnualReport.aspx")%>' title='<%=Resources.HercResource.AnnualReports %>'>
+                                    <%=Resources.HercResource.AnnualReports %></a>
+                                <%} %>
+                            </li>
+                            <li>
+                                <asp:Literal ID="ltrAbbreviations" runat="server"></asp:Literal>
+                                <%--<a href='<%=Page.ResolveUrl("~/Abbreation.aspx")%>' title="Abbreviations">
+                                <%=Resources.HercResource.Abbreviations %></a>--%></li>
+                            <%if (Resources.HercResource.Lang_Id == "1")
+                              {%>
+                            <li><a href='<%=Page.ResolveUrl("~/scheduleOfHearings.aspx")%>' title="Commission calendar">
+                                <%=Resources.HercResource.Commissioncalendar%>
+                            </a></li>
+                            <%}
+                              else
+                              {%>
+                            <li><a href='<%=Page.ResolveUrl("~/Content/Hindi/scheduleOfHearings.aspx")%>' title="Commission calendar">
+                                <%=Resources.HercResource.Commissioncalendar%>
+                            </a></li>
+                            <%} %>
+                            <li><a onclick="javascript:return confirm('This link shall take you to a webpage outside HERC website. HERC is not responsible for the contents and reliability of the linked websites and does not necessarily endorse the views expressed in them. For details you may refer to Hyperlinking Policy under Website Policies. Click OK to continue. Click Cancel to stop.');"
+                                href="https://mail.gov.in/"
+                                target="_blank" title="HERC Mail">
+                                <%=Resources.HercResource.HERCMail%>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="navigation-holder" id="main_Navigation" runat="server">
+                <ul class="sf-menu">
+                    <uc1:navigation ID="navigation1" runat="server" />
+                </ul>
+                <div class="search">
+
+                   <ucSearch:Search ID="ucSearch" runat="server" />
+                   <%-- <label for="<%=txtsearch.ClientID %>">
+                        Search</label>
+                    <asp:TextBox ID="txtsearch" runat="server" />
+                    <Ajax:TextBoxWatermarkExtender ID="txtwaterextedersearch" runat="server" TargetControlID="txtsearch"
+                        WatermarkText="Enter Your Keyword" />
+                    <div class="go">
+                        <label for="button">
+                            Go</label>
+                        <input type="image" id="button" alt="Click To Search" align="go" class="go" src="<%=ResolveUrl("~/images/go-btn.png") %>" />
+                    </div>--%>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="working-mid-holder" id="MainDiv">
+            <asp:ContentPlaceHolder ID="cphbreadcrumholder" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="cphcontent" runat="server">
+                <asp:ContentPlaceHolder ID="cphleftholder" runat="server">
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="cphrightholder" runat="server">
+                </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="mid-holder">
+            <div class="clear">
+            </div>
+            <div class="clear">
+            </div>
+            <div class="clear">
+            </div>
+            <div class="clear">
+            </div>
+            <div class="footer" id="FooterDiv" runat="server">
+                <asp:ContentPlaceHolder ID="cphfooterlink" runat="server">
+                    <uc1:Footer ID="Footer1" runat="server" />
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        initShowHideDivs();
+    </script>
+
+    <noscript class="noScript">
+        <p>
+            <%=Resources.HercResource.NoScriptBrowser%>
+        </p>
+    </noscript>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

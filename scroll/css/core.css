@@ -1,0 +1,13 @@
+
+
+
+#page {
+    background:             #fff;
+    width:                  700px;
+    margin:                 0 auto;
+    padding:                20px;
+    text-align:             left;
+    -moz-border-radius:     8px;
+    -webkit-border-radius:  8px;
+    border-radius:          8px;
+}

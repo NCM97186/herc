@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="External_Links" xml:space="preserve">
+    <value>External Links</value>
+  </data>
+  <data name="Font_Decrease" xml:space="preserve">
+    <value>Decrease Text Size</value>
+  </data>
+  <data name="Font_Increase" xml:space="preserve">
+    <value>Increase Text Size</value>
+  </data>
+  <data name="Font_Normal" xml:space="preserve">
+    <value>Normal Text Size</value>
+  </data>
+  <data name="FooterText_content" xml:space="preserve">
+    <value>© Content Owned and</value>
+  </data>
+  <data name="FooterText_site" xml:space="preserve">
+    <value>Site Designed, Developed and Hosted by</value>
+  </data>
+  <data name="Footer_by" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="GovtOf" xml:space="preserve">
+    <value>Government of Harayana</value>
+  </data>
+  <data name="Grievance" xml:space="preserve">
+    <value>Grievance</value>
+  </data>
+  <data name="HightContrast" xml:space="preserve">
+    <value>High Contrast View</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="HomePage1" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="IndianPortal" xml:space="preserve">
+    <value>Indian Portal</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Hindi</value>
+  </data>
+  <data name="Lang_Id" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LastUpdated" xml:space="preserve">
+    <value>Last Updated</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="News_Announcement" xml:space="preserve">
+    <value>News &amp;amp;amp; Announcements</value>
+  </data>
+  <data name="NIC" xml:space="preserve">
+    <value>National Informatics Centre</value>
+  </data>
+  <data name="ReadMore" xml:space="preserve">
+    <value>Read More</value>
+  </data>
+  <data name="ScreenReaderAccess" xml:space="preserve">
+    <value>Screen Reader Access</value>
+  </data>
+  <data name="SkipToMainContent" xml:space="preserve">
+    <value>Skip to Main Content</value>
+  </data>
+  <data name="StandardContrast" xml:space="preserve">
+    <value>Standard view</value>
+  </data>
+  <data name="Theme_Blue" xml:space="preserve">
+    <value>Blue Theme</value>
+  </data>
+  <data name="Theme_Green" xml:space="preserve">
+    <value>Green Theme</value>
+  </data>
+  <data name="Theme_Orange" xml:space="preserve">
+    <value>Orange Theme</value>
+  </data>
+  <data name="WebsiteTitle" xml:space="preserve">
+    <value>Haryana Electricity Regulatory Commission</value>
+  </data>
+  <data name="YouAreHere" xml:space="preserve">
+    <value>You are here :</value>
+  </data>
+  <data name="PageUrl" xml:space="preserve">
+    <value>content/</value>
+  </data>
+  <data name="PhotoGallery" xml:space="preserve">
+    <value>Photo Gallery</value>
+  </data>
+  <data name="DailyOrders" xml:space="preserve">
+    <value>Daily / Interim Orders</value>
+  </data>
+  <data name="DDPapers" xml:space="preserve">
+    <value>Drafts / Discussion Papers</value>
+  </data>
+  <data name="herc" xml:space="preserve">
+    <value>HERC</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="RepealedNotifications" xml:space="preserve">
+    <value>Repealed Notifications</value>
+  </data>
+  <data name="Abbreviations" xml:space="preserve">
+    <value>Abbreviations</value>
+  </data>
+  <data name="Aboutus" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="AboutOmbudsman" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="AnnualReports" xml:space="preserve">
+    <value>Annual Reports</value>
+  </data>
+  <data name="CategorywiseOrders" xml:space="preserve">
+    <value>Category Wise Orders</value>
+  </data>
+  <data name="CLSH" xml:space="preserve">
+    <value>Schedule of Hearing</value>
+  </data>
+  <data name="Commissioncalendar" xml:space="preserve">
+    <value>Commission Calendar</value>
+  </data>
+  <data name="CurrentYear" xml:space="preserve">
+    <value>Current Year</value>
+  </data>
+  <data name="CurrentYearOrder" xml:space="preserve">
+    <value>Current Year Orders</value>
+  </data>
+  <data name="CurrentYearPetitions" xml:space="preserve">
+    <value>Current Year Petitions</value>
+  </data>
+  <data name="EditProfile" xml:space="preserve">
+    <value>Edit Profile</value>
+  </data>
+  <data name="GovernmentofHaryana" xml:space="preserve">
+    <value>Government of Haryana</value>
+  </data>
+  <data name="hercfullname" xml:space="preserve">
+    <value>Updated by Haryana Electricity Regulatory Commission</value>
+  </data>
+  <data name="HERCMail" xml:space="preserve">
+    <value>HERC Email</value>
+  </data>
+  <data name="OnlineStatus" xml:space="preserve">
+    <value>Online Status</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="OrdersSearch" xml:space="preserve">
+    <value>Orders Search</value>
+  </data>
+  <data name="OrdersunderAppeal" xml:space="preserve">
+    <value>Orders Under Appeal</value>
+  </data>
+  <data name="Petitions" xml:space="preserve">
+    <value>Petitions</value>
+  </data>
+  <data name="PetitionsSearch" xml:space="preserve">
+    <value>Petitions Search</value>
+  </data>
+  <data name="PowerSectorLinks" xml:space="preserve">
+    <value>Power Sector Links</value>
+  </data>
+  <data name="PreviousYearOrder" xml:space="preserve">
+    <value>Previous Years Orders</value>
+  </data>
+  <data name="PreviousYearPetitions" xml:space="preserve">
+    <value>Previous Years Petitions</value>
+  </data>
+  <data name="PreviousYears" xml:space="preserve">
+    <value>Previous Years</value>
+  </data>
+  <data name="PublicNotice" xml:space="preserve">
+    <value>Public Notice</value>
+  </data>
+  <data name="PublicNoticeCurrent" xml:space="preserve">
+    <value>Current Year Public Notice</value>
+  </data>
+  <data name="RepealedOrders" xml:space="preserve">
+    <value>Repealed Orders</value>
+  </data>
+  <data name="RepealedDailyOrders" xml:space="preserve">
+    <value>Repealed Daily Orders</value>
+  </data>
+  <data name="AwardSearch" xml:space="preserve">
+    <value>Award Search </value>
+  </data>
+  <data name="SearchOrders" xml:space="preserve">
+    <value>Search Orders</value>
+  </data>
+  <data name="DailyOrdersSearch" xml:space="preserve">
+    <value>Daily Orders Search</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>Sign out</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="WhatNew" xml:space="preserve">
+    <value>What's New</value>
+  </data>
+  <data name="FooterLinks" xml:space="preserve">
+    <value>Footer Links</value>
+  </data>
+  <data name="HomePageLeftMemu" xml:space="preserve">
+    <value>Home Page Left Memu</value>
+  </data>
+  <data name="Sitemap" xml:space="preserve">
+    <value>Sitemap</value>
+  </data>
+  <data name="CoOrdinationForum" xml:space="preserve">
+    <value>Co-Ordination Forum</value>
+  </data>
+  <data name="Licensees" xml:space="preserve">
+    <value>Licensees</value>
+  </data>
+  <data name="Ombudsman" xml:space="preserve">
+    <value>Ombudsman</value>
+  </data>
+  <data name="StateAdvisoryCommittee" xml:space="preserve">
+    <value>State Advisory  Committee</value>
+  </data>
+  <data name="LastUpdated1" xml:space="preserve">
+    <value>Updated On</value>
+  </data>
+  <data name="Visitor" xml:space="preserve">
+    <value>Visitor</value>
+  </data>
+  <data name="SkiptoNavigation" xml:space="preserve">
+    <value>Skip to Navigation</value>
+  </data>
+  <data name="HaryanaPortal" xml:space="preserve">
+    <value>Haryana Portal</value>
+  </data>
+  <data name="RighttoInformation" xml:space="preserve">
+    <value>Right to Information</value>
+  </data>
+  <data name="OmbudsmanPageUrl" xml:space="preserve">
+    <value>OmbudsmanContent/</value>
+  </data>
+  <data name="PubliceNoticeOld" xml:space="preserve">
+    <value>Previous Years Public Notice</value>
+  </data>
+  <data name="Appeal" xml:space="preserve">
+    <value>Appeals</value>
+  </data>
+  <data name="Currentyearappeals" xml:space="preserve">
+    <value>Current Year Appeals</value>
+  </data>
+  <data name="Previousyeaappeals" xml:space="preserve">
+    <value>Previous Years Appeals</value>
+  </data>
+  <data name="SearchAppeal" xml:space="preserve">
+    <value>Appeal Search</value>
+  </data>
+  <data name="RTI" xml:space="preserve">
+    <value>RTI</value>
+  </data>
+  <data name="CurrentYearApplications" xml:space="preserve">
+    <value>Current Year Applications</value>
+  </data>
+  <data name="PreviousYearApplications" xml:space="preserve">
+    <value>Previous Years Applications</value>
+  </data>
+  <data name="ScheduleOfHearings" xml:space="preserve">
+    <value>Schedule of Hearing</value>
+  </data>
+  <data name="Regulations" xml:space="preserve">
+    <value>Regulations</value>
+  </data>
+  <data name="Standards" xml:space="preserve">
+    <value>Standards</value>
+  </data>
+  <data name="RepealedRegulations" xml:space="preserve">
+    <value>Repealed Regulations</value>
+  </data>
+  <data name="Codes" xml:space="preserve">
+    <value>Codes</value>
+  </data>
+  <data name="RepealedCodes" xml:space="preserve">
+    <value>Repealed Codes</value>
+  </data>
+  <data name="RepealedStandard" xml:space="preserve">
+    <value>Repealed Standards</value>
+  </data>
+  <data name="Policies" xml:space="preserve">
+    <value>Policies</value>
+  </data>
+  <data name="RepealedPolicies" xml:space="preserve">
+    <value>Repealed Policies</value>
+  </data>
+  <data name="Guidelines" xml:space="preserve">
+    <value>Guidelines</value>
+  </data>
+  <data name="RepealedGuidelines" xml:space="preserve">
+    <value>Repealed Guidelines</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="NameOfRegulation" xml:space="preserve">
+    <value>Name of Regulations</value>
+  </data>
+  <data name="SerialNumber" xml:space="preserve">
+    <value>S.No.</value>
+  </data>
+  <data name="AwardsPronounced" xml:space="preserve">
+    <value>Awards Pronounced</value>
+  </data>
+  <data name="Currentyearawards" xml:space="preserve">
+    <value>Current Year Awards</value>
+  </data>
+  <data name="Previousyearawards" xml:space="preserve">
+    <value>Previous Years Awards</value>
+  </data>
+  <data name="AwardUnderAppeal" xml:space="preserve">
+    <value>Awards Under Appeal</value>
+  </data>
+  <data name="Searchapplication" xml:space="preserve">
+    <value>Application Search </value>
+  </data>
+  <data name="PreviousYearRti" xml:space="preserve">
+    <value>Previous Years Applications</value>
+  </data>
+  <data name="Tariff" xml:space="preserve">
+    <value>Tariff</value>
+  </data>
+  <data name="TariffDetails" xml:space="preserve">
+    <value>Tariff Details</value>
+  </data>
+  <data name="ConsumerEmpowerment" xml:space="preserve">
+    <value>Consumer Empowerment</value>
+  </data>
+  <data name="DistributionCharges" xml:space="preserve">
+    <value>Distribution &amp;amp; Retail Supply </value>
+  </data>
+  <data name="TransmissionCharges" xml:space="preserve">
+    <value>Transmission &amp;amp; SLDC </value>
+  </data>
+  <data name="GenerationTariff" xml:space="preserve">
+    <value>Generation </value>
+  </data>
+  <data name="WheelingCharges" xml:space="preserve">
+    <value>Wheeling - Distribution System </value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="CurrentPublicNotice" xml:space="preserve">
+    <value>Current Public Notices</value>
+  </data>
+  <data name="PreviousPublicNotice" xml:space="preserve">
+    <value>Old Public Notices</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Profileprev" xml:space="preserve">
+    <value>Former Electricity Ombudsmen</value>
+  </data>
+  <data name="Profiledetails" xml:space="preserve">
+    <value>Profile Details</value>
+  </data>
+  <data name="Renewal" xml:space="preserve">
+    <value>Renewal Energy </value>
+  </data>
+  <data name="Cross" xml:space="preserve">
+    <value>Cross subsidy and Additional Surcharge</value>
+  </data>
+  <data name="FSA" xml:space="preserve">
+    <value>FSA</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="LocateUs" xml:space="preserve">
+    <value>Locate Us</value>
+  </data>
+  <data name="GeneralMiscCharges" xml:space="preserve">
+    <value>General &amp; Misc Charges</value>
+  </data>
+  <data name="profileofCurrentMembers" xml:space="preserve">
+    <value>Click here to view profile of current Chairperson &amp; Members</value>
+  </data>
+  <data name="profileofCurrentOmbudsmenMembers" xml:space="preserve">
+    <value>Click here to view profile of current Electricity Ombudsman</value>
+  </data>
+  <data name="profileofFormerOmbudsmenMembers" xml:space="preserve">
+    <value>Click here to view profile of former Electricity Ombudsmen</value>
+  </data>
+  <data name="profileofFormerMembers" xml:space="preserve">
+    <value>Click here to view profile of former Chairpersons &amp; Members</value>
+  </data>
+  <data name="FAA" xml:space="preserve">
+    <value>FAA</value>
+  </data>
+  <data name="SAA" xml:space="preserve">
+    <value>SAA</value>
+  </data>
+  <data name="RTICurrent" xml:space="preserve">
+    <value>Current Year  Applications</value>
+  </data>
+  <data name="RTIPrevious" xml:space="preserve">
+    <value>Previous Years  Applications</value>
+  </data>
+  <data name="CurrentPetition" xml:space="preserve">
+    <value>Current Year Petitions</value>
+  </data>
+  <data name="PreviousPetition" xml:space="preserve">
+    <value> Previous Years Petitions</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Lang" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="NoScriptBrowser" xml:space="preserve">
+    <value>JavaScript must be enabled in order for you to use the Site in standard view. However, it seems JavaScript is either disabled or not supported by your browser. To use standard view, enable JavaScript by changing your browser options.</value>
+  </data>
+  <data name="policiesGuidelines" xml:space="preserve">
+    <value>Policies &amp; Guidelines</value>
+  </data>
+  <data name="old" xml:space="preserve">
+    <value>Old</value>
+  </data>
+  <data name="oldVacancy" xml:space="preserve">
+    <value>Old</value>
+  </data>
+  <data name="Vacancies" xml:space="preserve">
+    <value>Vacancies</value>
+  </data>
+  <data name="OmbudsmanCalendar" xml:space="preserve">
+    <value>Ombudsman Calendar</value>
+  </data>
+  <data name="ApplicationSearch" xml:space="preserve">
+    <value>Application Search</value>
+  </data>
+  <data name="AwardsSearch" xml:space="preserve">
+    <value>Award Search</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="Dated" xml:space="preserve">
+    <value>Dated :</value>
+  </data>
+  <data name="CurrentAnnualReport" xml:space="preserve">
+    <value>Current Annual Report</value>
+  </data>
+  <data name="OldAnnualReport" xml:space="preserve">
+    <value>Old Annual Reports</value>
+  </data>
+  <data name="CurrentVacancies" xml:space="preserve">
+    <value>Current Vacancies</value>
+  </data>
+  <data name="OldVacancies" xml:space="preserve">
+    <value>Old Vacancies</value>
+  </data>
+  <data name="CurrentDraftDisscussionPaper" xml:space="preserve">
+    <value>Current Drafts / Discussion Papers
+</value>
+  </data>
+  <data name="OldDraftDisscussionPaper" xml:space="preserve">
+    <value>Old Drafts / Discussion Papers</value>
+  </data>
+  <data name="profileHeading" xml:space="preserve">
+    <value>Profile Details of Former Electricity Ombudsman </value>
+  </data>
+  <data name="profileHercDetails" xml:space="preserve">
+    <value> Former Chairpersons &amp; Members</value>
+  </data>
+  <data name="currentReviewPetitions" xml:space="preserve">
+    <value>Current Year Review Petitions</value>
+  </data>
+  <data name="CurrentYearAppealPetition" xml:space="preserve">
+    <value>Current Year Petitions under appeal</value>
+  </data>
+  <data name="CurrentYearApplicationsFAA" xml:space="preserve">
+    <value>Current Year Applications- FAA</value>
+  </data>
+  <data name="CurrentYearApplicationsSAA" xml:space="preserve">
+    <value>Current Year Applications- SAA</value>
+  </data>
+  <data name="PreviousYearApplicationsFAA" xml:space="preserve">
+    <value>Previous Years Applications- FAA</value>
+  </data>
+  <data name="PreviousYearApplicationsSAA" xml:space="preserve">
+    <value>Previous Years Applications- SAA</value>
+  </data>
+  <data name="PreviousYearPetitionsAppeal" xml:space="preserve">
+    <value>Previous Years Petitions under appeal</value>
+  </data>
+  <data name="PreviousYearPetitionsReview" xml:space="preserve">
+    <value>Previous Years Review Petitions</value>
+  </data>
+  <data name="nationalemblem" xml:space="preserve">
+    <value>National Emblem</value>
+  </data>
+  <data name="EnterYourKeywords" xml:space="preserve">
+    <value>Enter Your Keywords</value>
+  </data>
+  <data name="Archive" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="WebsiteTitleOmbudsman" xml:space="preserve">
+    <value>The Electricity Ombudsman</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Updated: </value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="ClickHereToViewDetails" xml:space="preserve">
+    <value>Click here to view details</value>
+  </data>
+  <data name="Leftlinks" xml:space="preserve">
+    <value>Left Links</value>
+  </data>
+  <data name="MiddleLinks" xml:space="preserve">
+    <value>Middle Links</value>
+  </data>
+  <data name="Orderlinks" xml:space="preserve">
+    <value>Order Links</value>
+  </data>
+  <data name="Petitionlinks" xml:space="preserve">
+    <value>Petition Links</value>
+  </data>
+  <data name="Toplinks" xml:space="preserve">
+    <value>Top Links</value>
+  </data>
+  <data name="ViewOmbudsmanSitemap" xml:space="preserve">
+    <value>View Ombudsman Sitemap</value>
+  </data>
+  <data name="ViewSitemap" xml:space="preserve">
+    <value>View HERC Sitemap</value>
+  </data>
+  <data name="ViewDocument" xml:space="preserve">
+    <value>View Document</value>
+  </data>
+  <data name="googleSearch" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="NoDataAvailable" xml:space="preserve">
+    <value>No data available</value>
+  </data>
+  <data name="imagetoplay" xml:space="preserve">
+    <value>Image to Play</value>
+  </data>
+  <data name="imagetostop" xml:space="preserve">
+    <value>Image to Stop</value>
+  </data>
+  <data name="DialGov" xml:space="preserve">
+    <value>dial.gov.in</value>
+  </data>
+  <data name="Nextyear" xml:space="preserve">
+    <value>Next Year</value>
+  </data>
+<data name="FooterText_site_upper" xml:space="preserve">
+    <value>Website Nodal Officer: Sh. Rishi Parwanda, System Manager (0172-2590869)</value>
+  </data>
+</root>

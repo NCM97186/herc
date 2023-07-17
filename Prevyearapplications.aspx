@@ -1,0 +1,180 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/Usermaster.master" AutoEventWireup="true"
+    CodeFile="Prevyearapplications.aspx.cs" Inherits="Prevyearapplications" %>
+
+<%--<%@ Register Src="UserControl/LeftMenuFor_InternalPagesUserControl.ascx" TagName="LeftMenuFor_InternalPagesUserControl"
+    TagPrefix="uc1" %>--%>
+<%@ Register Src="UserControl/RTI_Control.ascx" TagName="RTI_Control" TagPrefix="uc1" %>
+<%@ Register Src="UserControl/hercfooter.ascx" TagName="hercfooter" TagPrefix="uc2" %>
+<asp:Content ID="contentbreadhum" runat="server" ContentPlaceHolderID="cphbreadcrumholder">
+    <div id="BreadcrumDiv" runat="server" class="breadcrum">
+        <div class="breadcrumb-left-holder">
+            <ul>
+                <asp:Literal ID="ltrlBreadcrum" runat="server"> </asp:Literal>
+            </ul>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="contentrightholder" runat="server" ContentPlaceHolderID="cphrightholder">
+    <div class="right-holder">
+        <div class="working-content-holder">
+            <div class="page-had">
+                <div class="page-had-left">
+                </div>
+                <div class="page-had-mid-side">
+                    <h2>
+                        <%=Resources.HercResource.RTIPrevious%>
+                    </h2>
+                    <div class="page-had-right-side">
+                        <div id="PrintDiv" runat="server" class="print-icon">
+                          
+                            <a href="<%=UrlPrint%>?format=Print" title="Print" target="_blank">
+                                <img src="<%=ResolveUrl("~/images/print-icon.png")%>" width="18" height="16" alt="Print"
+                                    title="Print" /></a>
+                                        
+                            
+                        </div>
+                        <div id="DlastUpdate" runat="server" class="last-updated">
+                            <strong>
+                                <%=Resources.HercResource.LastUpdated %>:</strong><%=lastUpdatedDate %>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-had-right">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="text-holder">
+  
+                <div id="DRti" runat="server" class="RTI_link2">
+                    <ul>
+                        <li>
+                            <asp:LinkButton ID="lnkFAA" runat="server" OnClick="lnkFAA_click">View Previous Years FAA Applications</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lnkSAA" runat="server" OnClick="lnkSAA_click">View Previous Years SAA Applications</asp:LinkButton></li>
+                    </ul>
+                </div>
+                <br />
+                <br />
+				<asp:Label ID="lblmsg" runat="server" Visible="false"></asp:Label>
+                <p id="pyear" runat="server" visible="false">
+                   <label for="<%=drpyear.ClientID %>">
+                    Select for Previous Years RTI Applications:</label>
+                    <asp:DropDownList ID="drpyear" runat="server" AutoPostBack="true" OnSelectedIndexChanged="drpyear_SelectedIndexChanged">
+                    </asp:DropDownList>
+                </p>
+                <br />
+                <asp:GridView ID="Grdappeal" DataKeyNames="RTI_Id" runat="server" Width="100%" AutoGenerateColumns="false"
+                    UseAccessibleHeader="true" OnRowDataBound="Grdappeal_RowDataBound" OnRowCommand="Grdappeal_RowCommand">
+                    <EmptyDataTemplate>
+                        No Record Found
+                    </EmptyDataTemplate>
+                    <Columns>
+                        <asp:TemplateField HeaderText="RTI Ref No" ItemStyle-CssClass="Text-Center" HeaderStyle-CssClass="Text-Center">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lblrefno" runat="server" Text='<%#Eval("refno") %>' CommandArgument='<%#Eval("RTI_Id") %>'
+                                    CommandName="Vdetail" ToolTip='<%#Resources.HercResource.ClickHereToViewDetails %>' ></asp:LinkButton>
+                                <%--   <asp:Label ID="lblrefno" runat="server" Text='<%#Eval("refno")%>' />--%>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Year" HeaderStyle-HorizontalAlign="Center" Visible="false">
+                            <ItemTemplate>
+                                <asp:Label ID="lblyear" runat="server" Text='<%#Eval("Year") %>' />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField HeaderText="Date" DataField="Application_Date" ItemStyle-CssClass="Text-Center"
+                            HeaderStyle-CssClass="Text-Center" />
+                        <asp:TemplateField HeaderText="Applicant(s)" HeaderStyle-CssClass="Text-Center">
+                            <ItemTemplate>
+                                <asp:Label ID="lblApplicant" runat="server" Text='<%#Miscelleneous_DL.FixCharacters(Server.HtmlDecode((string)DataBinder.Eval(Container.DataItem,"Applicant_Name")),100) %>'>
+                                </asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Subject" HeaderStyle-HorizontalAlign="Center">
+                            <ItemTemplate>
+                                <asp:Label ID="lblSubject" runat="server" Text='<%#Miscelleneous_DL.FixCharacters(Server.HtmlDecode((string)DataBinder.Eval(Container.DataItem,"Subject")),100) %>' />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Status" HeaderStyle-HorizontalAlign="Center">
+                            <ItemTemplate>
+                                <asp:HiddenField ID="hydapdate" runat="server" Value='<%#Eval("PlaceholderTwo") %>' />
+                                <asp:HiddenField ID="hydstatus" runat="server" Value='<%#Eval("RTI_Status_Id") %>' />
+                                <asp:HiddenField ID="rtistatus" runat="server" Value='<%#Eval("rtistatusId") %>' />
+                                <asp:Label ID="lblstatus" runat="server" Text='<%#Miscelleneous_DL.FixCharacters(DataBinder.Eval(Container.DataItem,"RTI_Status_Id"),100) %>' />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Download" Visible="false">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lbl_ViewDoc" runat="server" CommandName="ViewDoc" CommandArgument='<%#Eval("FileName")%>'>
+                                  
+                                     <img src="<%=ResolveUrl("~/images/pdf-icon.jpg")%>" title="View Document" width="20" alt="View Document"
+                                    height="20" />       
+                                </asp:LinkButton>
+                                <asp:HiddenField ID="hdfFile" runat="server" Value='<%#Eval("FileName") %>' />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Appeal To FAA" Visible="false">
+                            <ItemTemplate>
+                                <asp:HiddenField ID="status" runat="server" Value='<%#Eval("rtistatusId") %>' />
+                                <asp:HiddenField ID="hyd" runat="server" Value='<%#Eval("RTI_Id") %>' />
+                                <asp:LinkButton ID="lnklink" runat="server" Font-Bold="true" CommandArgument='<%#Eval("RTI_Id") %>'
+                                    CommandName="Vdetail"></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Remarks" HeaderStyle-CssClass="Text-Center">
+                            <ItemTemplate>
+                                <asp:Label ID="lblRemarks" runat="server" Text='<%#Miscelleneous_DL.FixCharacters(DataBinder.Eval(Container.DataItem,"PlaceholderFive"),100) %>' />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+                <br />
+                <div class="clear">
+                </div>
+               <br />
+                    <div style="float: right;" class="paging">
+                        <asp:Repeater ID="rptPager" runat="server">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lnkPage" runat="server" Text='<%#Eval("Text") %>' CommandArgument='<%# Eval("Value") %>'
+                                    Enabled='<%# Eval("Enabled") %>' OnClick="lnkPage_Click"></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblPageSize" runat="server"></asp:Label>
+                             <label for="<%=ddlPageSize.ClientID %>">
+                            &nbsp;</label>
+                        <asp:DropDownList ID="ddlPageSize" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPageSize_SelectedIndexChanged">
+                            <asp:ListItem Text="10" Value="10" />
+                            <asp:ListItem Text="20" Value="20" />
+                            <asp:ListItem Text="30" Value="30" />
+                        </asp:DropDownList>
+                    </div>
+           
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <!--mid-holder-Close-->
+    </div>
+    <div class="clear">
+    </div>
+</asp:Content>
+<asp:Content ID="Content6" runat="server" ContentPlaceHolderID="cphleftholder">
+    <div class="left-holder">
+        <div class="left-nav-holder">
+            <div class="left-nav-had">
+                <div class="left-nav-mid">
+                    <h2>
+                        <%=Resources.HercResource.RTI %>
+                    </h2>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+       
+            <uc1:RTI_Control ID="RTI_Control2" runat="server" />
+        </div>
+    </div>
+</asp:Content>

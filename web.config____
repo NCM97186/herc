@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Note: As an alternative to hand editing this file you can use the 
+    web admin tool to configure settings for your application. Use
+    the Website->Asp.Net Configuration option in Visual Studio.
+    A full list of settings and comments can be found in 
+    machine.config.comments usually located in  
+    \Windows\Microsoft.Net\Framework\v2.x\Config-->
+<configuration>
+  <configSections>
+    <sectionGroup name="modulesSection">
+      <section name="rewriteModule" type="RewriteModule.RewriteModuleSectionHandler, RewriteModule" />
+    </sectionGroup>
+    <sectionGroup name="system.web.extensions" type="System.Web.Configuration.SystemWebExtensionsSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+      <!--<sectionGroup name="scripting" type="System.Web.Configuration.ScriptingSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+        <section name="scriptResourceHandler" type="System.Web.Configuration.ScriptingScriptResourceHandlerSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+        <sectionGroup name="webServices" type="System.Web.Configuration.ScriptingWebServicesSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+          <section name="jsonSerialization" type="System.Web.Configuration.ScriptingJsonSerializationSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="Everywhere"/>
+          <section name="profileService" type="System.Web.Configuration.ScriptingProfileServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+          <section name="authenticationService" type="System.Web.Configuration.ScriptingAuthenticationServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+          <section name="roleService" type="System.Web.Configuration.ScriptingRoleServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+        </sectionGroup>
+      </sectionGroup>-->
+    </sectionGroup>
+  </configSections>
+  <appSettings>
+    <add key="WriteReadData" value="WriteReadData" />
+    <add key="Image" value="Image" />
+    <add key="Pdf" value="Pdf" />
+    <add key="CMS" value="CMS" />
+    <add key="Petition" value="Petition" />
+    <add key="Interim_Order" value="Interim_Order" />
+    <add key="Order_Pronounced" value="Order_Pronounced" />
+    <add key="Judgement_Pronounced" value="Judgement_Pronounced" />
+    <add key="Public_Notice" value="Public_Notice" />
+    <add key="scheduleofHearing" value="scheduleofHearing" />
+    <add key="uploads" value="uploads" />
+    <add key="temp" value="temp" />
+    <add key="Rti" value="Rti" />
+    <add key="Appeal" value="Appeal" />
+    <add key="Orders" value="Orders" />
+    <add key="AwardPronounced" value="AwardPronounced" />
+    <add key="UserFiles" value="UserFiles" />
+    <add key="file" value="file" />
+    <add key="image" value="image" />
+    <add key="adminEmail" value="sm.herc@nic.in" />
+    <add key="from" value="no-reply.herc@nic.in" />
+    <add key="SITE_ADMIN_URL" value="http://herc.gov.in/Auth/AdminPanel/" />
+    <add key="SMTP_Server" value="relay.nic.in" />
+  </appSettings>
+  <connectionStrings>
+    <add name="connectionstring" connectionString="server =10.25.127.99;Initial Catalog=herc; Persist Security Info=True;User ID=herc; Pwd=PLj*$23AcG; MultipleActiveResultSets=False;Packet Size=4096;    Application Name=&quot;Microsoft SQL Server Management Studio&quot;" providerName="System.Data.SqlClient" />
+ <!-- <add name="connectionstring" connectionString="server =100.100.7.3;Initial Catalog=herc_new; Persist Security Info=True;User ID=herc; Pwd=ncm@1234; MultipleActiveResultSets=False;Packet Size=4096;    Application Name=&quot;Microsoft SQL Server Management Studio&quot;" providerName="System.Data.SqlClient" />-->
+  </connectionStrings>
+  <system.web>
+    <browserCaps>
+      <case match="W3C_Validator*">
+        TagWriter = System.Web.UI.HtmlTextWriter
+        W3CDomVersion = 1.0
+      </case>
+    </browserCaps>
+    <sessionState timeout="15" />
+    <httpCookies httpOnlyCookies="true" />
+    <!-- 
+            Set compilation debug="true" to insert debugging 
+            symbols into the compiled page. Because this 
+            affects performance, set this value to true only 
+            during development.-->
+    <hostingEnvironment shadowCopyBinAssemblies="false" />
+    <httpRuntime maxRequestLength="1048576" executionTimeout="600" enableVersionHeader="false" />
+    <compilation debug="true">
+      <buildProviders>
+        <add extension=".htm" type="System.Web.Compilation.PageBuildProvider" />
+        <add extension=".html" type="System.Web.Compilation.PageBuildProvider" />
+      </buildProviders>
+      <assemblies>
+        <add assembly="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Web.Extensions.Design, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+      </assemblies>
+    </compilation>
+    <authentication mode="Windows" />
+    <!--   The <customErrors> section enables configuration 
+            of what to do if/when an unhandled error occurs 
+            during the execution of a request. Specifically, 
+            it enables developers to configure html error pages 
+            to be displayed in place of a error stack trace.
+
+        <customErrors mode="On" defaultRedirect="GenericErrorPage.htm">
+            <error statusCode="403" redirect="NoAccess.htm" />
+            <error statusCode="404" redirect="FileNotFound.htm" />
+        </customErrors> -->
+		
+		 <authorization>
+       	<allow verbs="Get" users="*" />
+			<allow verbs="Post" users="*" />
+			<deny verbs="OPTIONS" users="*" />
+			<deny verbs="OPTIONS" users="*" />
+			<deny verbs="TRACE" users="*" />
+			<deny verbs="HEAD" users="*" />
+			<deny verbs="MOVE" users="*" />
+			<deny verbs="DELETE" users="*" />
+     </authorization>
+		
+		
+    <customErrors mode="On" />
+    <pages enableEventValidation="false" viewStateEncryptionMode="Always" enableViewStateMac="true" maintainScrollPositionOnPostBack="true" validateRequest="false" buffer="true">
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add tagPrefix="asp" namespace="System.Web.UI.WebControls" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      </controls>
+    </pages>
+    <!--<machineKey validationKey="AutoGenerate,IsolateApps"
+            decryptionKey="AutoGenerate,IsolateApps"
+            validation="SHA1" decryption="Auto" />-->
+    <!--<machineKey validationKey='9DE8B0CFFD59D968C0152493EE2547906D906A5C92935E2D21B829E5CEA1AB7823AA99B67AD6B410AAEF89DFDB3B7A3CF743D13D5411229B35D0720E6D1840DE'   decryptionKey='65F78B22C9D40A5DB187785D92830C3C8174DE87E16F234D'   validation='SHA1'/>-->
+    <httpHandlers>
+      <add path="CaptchaImage.axd" verb="*" type="ncmcaptcha.CaptchaImageHandler,ncmcaptcha" />
+      <add verb="*" path="CaptchaAudio.axd" type="ncmcaptcha.CaptchaAudioHandler, ncmcaptcha" />
+      <remove verb="*" path="*.asmx" />
+      <add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add verb="*" path="*_AppService.axd" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add verb="GET,HEAD" path="ScriptResource.axd" validate="false" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+    </httpHandlers>
+    <httpModules>
+      <add name="RewriteModule" type="RewriteModule.RewriteModule, RewriteModule" />
+      <add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+    </httpModules>
+  </system.web>
+  <modulesSection>
+    <rewriteModule>
+      <rewriteOn>true</rewriteOn>
+      <rewriteRules>
+        <rule source="content/(.+)/index.aspx" destination="index.aspx?LangID=$1" />
+        <rule source="content/(.+)/Ombudsman.aspx" destination="Ombudsman/Ombudsman.aspx?LangID=$1" />
+        <rule source="content/(.+)/SOHPrevYear/(.+).aspx" destination="SOH.aspx?LangID=$1&amp;prev=$2" />
+        <rule source="content/(.+)/SOHNextYear/(.+).aspx" destination="SOH.aspx?LangID=$1&amp;next=$2" />
+        <rule source="SOHPrevYear/(.+).aspx" destination="SOH.aspx?prev=$1" />
+        <rule source="SOHNextYear/(.+).aspx" destination="SOH.aspx?next=$1" />
+        <rule source="OmbudsmanContent/(.+)/SearchOmbudsman.aspx" destination="Ombudsman/SearchOmbudsman.aspx?LangID=$1" />
+        <rule source="content/(.+)/SOH.aspx" destination="SOH.aspx?LangID=$1" />
+        <rule source="Content/(.+)/SearchSOH.aspx" destination="SearchSOH.aspx?LangID=$1" />
+        <rule source="Content/(.+)/AnnualReport.aspx" destination="AnnualReport.aspx?LangID=$1" />
+        <rule source="AnnualReport.aspx" destination="AnnualReport.aspx" />
+        <rule source="Content/(.+)/AnnualReport/(.+).aspx" destination="AnnualReport.aspx?LangID=$1&amp;prev=$2" />
+        <rule source="AnnualReport/(.+).aspx" destination="AnnualReport.aspx?prev=$1" />
+        <rule source="content/(.+)/DiscussionPapersPrevYear/(.+).aspx" destination="DiscussionPapers.aspx?LangID=$1&amp;PrevYear=$2" />
+        <rule source="DiscussionPapersPrevYear/(.+).aspx" destination="DiscussionPapers.aspx?PrevYear=$1" />
+        <!--Rules for OmbudsmanSitemap-->
+        <rule source="OmbudsmanContent/(.+)/OmbudsmanSiteMap/(.+)_(.+)_(.+).aspx" destination="Ombudsman/OmbudsmanSiteMap.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="OmbudsmanSiteMap/(.+)_(.+)_(.+).aspx" destination="Ombudsman/OmbudsmanSiteMap.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <!--End-->
+        <rule source="content/(.+)/Locate/(.+)_(.+)_(.+).aspx" destination="Locate.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="Locate/(.+)_(.+)_(.+).aspx" destination="Locate.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <!--Rules for Awards Page-->
+        <rule source="OmbudsmanContent/(.+)/AwardsUnderAppeal/(.+)_(.+)_(.+).aspx" destination="Ombudsman/AwardsUnderAppeal.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="AwardsUnderAppeal/(.+)_(.+)_(.+).aspx" destination="Ombudsman/AwardsUnderAppeal.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/AwardsCurrent/(.+)_(.+)_(.+).aspx" destination="Ombudsman/currentyearawardpronounce.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="AwardsCurrent/(.+)_(.+)_(.+).aspx" destination="Ombudsman/currentyearawardpronounce.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/AwardsPrevious/(.+)_(.+)_(.+).aspx" destination="Ombudsman/prevyearawardpronounce.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="AwardsPrevious/(.+)_(.+)_(.+).aspx" destination="Ombudsman/prevyearawardpronounce.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/AwardsSearch/(.+)_(.+)_(.+).aspx" destination="Ombudsman/searchaward.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="AwardsSearch/(.+)_(.+)_(.+).aspx" destination="Ombudsman/searchaward.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <!--End-->
+        <rule source="content/(.+)/RP_SOH.aspx" destination="RP_SOH.aspx?LangID=$1" />
+        <rule source="OmbudsmanContent/(.+)/ScheduleOfHearing.aspx" destination="Ombudsman/ScheduleOfHearing.aspx?LangID=$1" />
+        <!--Rules for Vacancy-->
+        <rule source="content/(.+)/Vacancies/(.+)_(.+)_(.+).aspx" destination="Vacancies.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="Vacancies/(.+)_(.+)_(.+).aspx" destination="Vacancies.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="content/(.+)/VacanciesPrevYear/(.+).aspx" destination="Vacancies.aspx?LangID=$1&amp;PrevYear=$2" />
+        <rule source="VacanciesPrevYear/(.+).aspx" destination="Vacancies.aspx?PrevYear=$1" />
+        <!--End-->
+        <!--Prev RTI Link Gaurav -->
+        <rule source="content/(.+)/ViewRtiFaa/(.+)_(.+)_(.+).aspx" destination="ViewRtiFaa.aspx?LangID=$1&amp;rtiid=$2&amp;menuid=$3&amp;position=$4" />
+        <rule source="ViewRtiFaa/(.+)_(.+)_(.+).aspx" destination="ViewRtiFaa.aspx?rtiid=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="Content/(.+)/CurrentRTI/(.+)_(.+)_(.+).aspx" destination="CurrentRTI.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="CurrentRTI/(.+)_(.+)_(.+).aspx" destination="CurrentRTI.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="Content/(.+)/RtiPages/(.+)_(.+)_(.+).aspx" destination="RtiPages.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="RtiPages/(.+)_(.+)_(.+).aspx" destination="RtiPages.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="Content/(.+)/PrevRTI/(.+)_(.+)_(.+).aspx" destination="Prevyearapplications.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="PrevRTI/(.+)_(.+)_(.+).aspx" destination="Prevyearapplications.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="Content/(.+)/PreviousRTIPages/(.+)_(.+)_(.+).aspx" destination="PreviousRTIPages.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="PreviousRTIPages/(.+)_(.+)_(.+).aspx" destination="PreviousRTIPages.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="Content/(.+)/searchRTI/(.+)_(.+)_(.+).aspx" destination="RTISearch.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="searchRTI/(.+)_(.+)_(.+).aspx" destination="RTISearch.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="Content/(.+)/CurrentFAA/(.+)_(.+).aspx" destination="CurrentFAA.aspx?LangID=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="CurrentFAA/(.+)_(.+).aspx" destination="CurrentFAA.aspx?menuid=$1&amp;position=$2" />
+        <rule source="Content/(.+)/PreviousFAA/(.+)_(.+).aspx" destination="PreviousFAA.aspx?LangID=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="PreviousFAA/(.+)_(.+).aspx" destination="PreviousFAA.aspx?menuid=$1&amp;position=$2" />
+        <rule source="Content/(.+)/CurrentSAA/(.+)_(.+).aspx" destination="CurrentSAA.aspx?LangID=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="CurrentSAA/(.+)_(.+).aspx" destination="CurrentSAA.aspx?menuid=$1&amp;position=$2" />
+        <rule source="Content/(.+)/PreviousSAA/(.+)_(.+).aspx" destination="PreviousSAA.aspx?LangID=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="PreviousSAA/(.+)_(.+).aspx" destination="PreviousSAA.aspx?menuid=$1&amp;position=$2" />
+        <rule source="Content/(.+)/ViewRTIDetails/(.+)_(.+)_(.+).aspx" destination="ViewRTIDetails.aspx?LangID=$1&amp;rtiid=$2&amp;menuid=$3&amp;position=$4" />
+        <rule source="ViewRTIDetails/(.+)_(.+)_(.+).aspx" destination="ViewRTIDetails.aspx?rtiid=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="Locate/(.+)_(.+)_(.+).aspx" destination="Locate.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <!--End of RTI Page Link-->
+        <!--Rules for Ombodsman Previous Year RTI -->
+        <rule source="OmbudsmanContent/(.+)/faa/(.+)_(.+)_(.+).aspx" destination="Ombudsman/viewfaa.aspx?LangID=$1&amp;rtiid=$2&amp;menuid=$3&amp;position=$4" />
+        <rule source="faa/(.+)_(.+)_(.+).aspx" destination="Ombudsman/viewfaa.aspx?rtiid=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="OmbudsmanContent/(.+)/RTICurrent/(.+)_(.+)_(.+).aspx" destination="Ombudsman/RTI.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="RTICurrent/(.+)_(.+)_(.+).aspx" destination="Ombudsman/RTI.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/RTIPageOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/RTIPageOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="RTIPageOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/RTIPageOmbudsman.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/perviousrti/(.+)_(.+)_(.+).aspx" destination="Ombudsman/perviousrti.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="perviousrti/(.+)_(.+)_(.+).aspx" destination="Ombudsman/perviousrti.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/PreviousRTIPageOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/PreviousRTIPageOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="PreviousRTIPageOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/PreviousRTIPageOmbudsman.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/RTISearch/(.+)_(.+)_(.+).aspx" destination="Ombudsman/rtisearch.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="RTISearch/(.+)_(.+)_(.+).aspx" destination="Ombudsman/rtisearch.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/RTICurrent/faa.aspx" destination="Ombudsman/viewfaa.aspx" />
+        <rule source="RTICurrent/faa.aspx" destination="Ombudsman/viewfaa.aspx" />
+        <rule source="OmbudsmanContent/(.+)/ViewRTIOmbudsmanDetails/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ViewRTIOmbudsmanDetails.aspx?LangID=$1&amp;rtiid=$2&amp;menuid=$3&amp;position=$4" />
+        <rule source="ViewRTIOmbudsmanDetails/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ViewRTIOmbudsmanDetails.aspx?rtiid=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="OmbudsmanContent/(.+)/CurrentFAAOmbudsman/(.+)_(.+).aspx" destination="Ombudsman/CurrentFAAOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="CurrentFAAOmbudsman/(.+)_(.+).aspx" destination="Ombudsman/CurrentFAAOmbudsman.aspx?menuid=$1&amp;position=$2" />
+        <rule source="OmbudsmanContent/(.+)/PreviousFAAOmbudsman/(.+)_(.+).aspx" destination="Ombudsman/PreviousFAAOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="PreviousFAAOmbudsman/(.+)_(.+).aspx" destination="Ombudsman/PreviousFAAOmbudsman.aspx?menuid=$1&amp;position=$2" />
+        <rule source="OmbudsmanContent/(.+)/CurrentSAAOmbudsman/(.+)_(.+).aspx" destination="Ombudsman/CurrentSAAOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="CurrentSAAOmbudsman/(.+)_(.+).aspx" destination="Ombudsman/CurrentSAAOmbudsman.aspx?menuid=$1&amp;position=$2" />
+        <rule source="OmbudsmanContent/(.+)/PreviousSAAOmbudsman/(.+)_(.+).aspx" destination="Ombudsman/PreviousSAAOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="PreviousSAAOmbudsman/(.+)_(.+).aspx" destination="Ombudsman/PreviousSAAOmbudsman.aspx?menuid=$1&amp;position=$2" />
+        <!--End-->
+        <rule source="content/(.+)/Regulation/(.+).aspx" destination="Regulation.aspx?LangID=$1&amp;id=$2" />
+        <rule source="Regulation/(.+).aspx" destination="Regulation.aspx?id=$1" />
+        <!--End-->
+        <!--Rules for orders -->
+        <rule source="content/(.+)/CurrentDailyOrders.aspx" destination="CurrentDailyOrders.aspx?LangID=$1" />
+        <rule source="CurrentDailyOrders.aspx" destination="CurrentDailyOrders.aspx" />
+        <rule source="content/(.+)/CurrentDailyOrders/(.+).aspx" destination="CurrentDailyOrders.aspx?LangID=$1&amp;Repealed=$2" />
+        <rule source="CurrentDailyOrders/(.+).aspx" destination="CurrentDailyOrders.aspx?Repealed=$1" />
+        <rule source="content/(.+)/PrevYear/(.+).aspx" destination="CurrentDailyOrders.aspx?LangID=$1&amp;PrevYear=$2" />
+        <rule source="PrevYear/(.+).aspx" destination="CurrentDailyOrders.aspx?PrevYear=$1" />
+        <!--End-->
+        <!--Rules for Disscussion Papers -->
+        <rule source="content/(.+)/DiscussionPapers.aspx" destination="DiscussionPapers.aspx?LangID=$1" />
+        <rule source="CurrentDailyOrders.aspx" destination="DiscussionPapers.aspx" />
+        <!--End-->
+        <!--Rules for Notification -->
+        <rule source="content/(.+)/Notifications/(.+).aspx" destination="Notifications.aspx?LangID=$1&amp;id=$2" />
+        <rule source="Notifications/(.+).aspx" destination="Notifications.aspx?id=$1" />
+        <!--End-->
+        <!--Rules for Polices -->
+        <rule source="content/(.+)/Policies/(.+).aspx" destination="Policies.aspx?LangID=$1&amp;id=$2" />
+        <rule source="Policies/(.+).aspx" destination="Policies.aspx?id=$1" />
+        <!--End-->
+        <!--Rules for Guidelines -->
+        <rule source="content/(.+)/GuideLines/(.+).aspx" destination="GuideLines.aspx?LangID=$1&amp;id=$2" />
+        <rule source="GuideLines/(.+).aspx" destination="GuideLines.aspx?id=$1" />
+        <!--End-->
+        <!--Rules for Standards -->
+        <rule source="content/(.+)/Standards/(.+).aspx" destination="Standards.aspx?LangID=$1&amp;id=$2" />
+        <rule source="Standards/(.+).aspx" destination="Standards.aspx?id=$1" />
+        <!--End-->
+        <rule source="OmbudsmanContent/(.+)/ViewAppealDetails.aspx" destination="Ombudsman/ViewAppealDetails.aspx?LangID=$1" />
+        <rule source="Ombudsman/ViewAppealDetails.aspx" destination="Ombudsman/ViewAppealDetails.aspx" />
+        <!--Rules for Codes -->
+        <rule source="content/(.+)/Codes/(.+).aspx" destination="Codes.aspx?LangID=$1&amp;id=$2" />
+        <rule source="Codes/(.+).aspx" destination="Codes.aspx?id=$1" />
+        <rule source="content/(.+)/Search.aspx" destination="Search.aspx?LangID=$1" />
+        <!--End-->
+        <!--Rules for Daily Orders-->
+        <rule source="content/(.+)/CurrentYearOrders.aspx" destination="CurrentYearOrders.aspx?LangID=$1" />
+        <rule source="content/(.+)/CurrentOrderSearch.aspx" destination="CurrentOrderSearch.aspx?LangID=$1" />
+        <rule source="content/(.+)/CategorywiseOrders.aspx" destination="CategorywiseOrders.aspx?LangID=$1" />
+        <rule source="content/(.+)/CurrentYearOrders/(.+).aspx" destination="CurrentYearOrders.aspx?LangID=$1&amp;PrevYear=$2" />
+        <rule source="CurrentYearOrders/(.+).aspx" destination="CurrentYearOrders.aspx?PrevYear=$1" />
+        <!--End-->
+        <!--Rules for Orders-->
+        <rule source="content/(.+)/SearchDailyOrders.aspx" destination="SearchDailyOrders.aspx?LangID=$1" />
+        <!--End-->
+        <!--Rules for Petitions-->
+        <rule source="content/(.+)/petition.aspx" destination="petition.aspx?LangID=$1" />
+        <rule source="content/(.+)/PetitionSearch.aspx" destination="PetitionSearch.aspx?LangID=$1" />
+        <rule source="content/(.+)/OnlineStatus.aspx" destination="OnlineStatus.aspx?LangID=$1" />
+        <rule source="content/(.+)/petition/(.+).aspx" destination="petition.aspx?LangID=$1&amp;PrevYear=$2" />
+        <rule source="petition/(.+).aspx" destination="petition.aspx?PrevYear=$1" />
+        <!--End-->
+        <rule source="content/(.+)/PublicNoticeDetails.aspx" destination="PublicNoticeDetails.aspx?LangID=$1" />
+        <rule source="content/(.+)/publicNoticeOlddetails.aspx" destination="publicNoticeOlddetails.aspx?LangID=$1" />
+        <rule source="content/(.+)/WhatsNew.aspx" destination="WhatsNew.aspx?LangID=$1" />
+        <rule source="content/(.+)/scheduleOfHearings.aspx" destination="scheduleOfHearings.aspx?LangID=$1" />
+        <rule source="content/(.+)/Ombudsman.aspx" destination="Ombudsman/Ombudsman.aspx?LangID=$1" />
+        <rule source="content/(.+)/EditProfile.aspx" destination="Auth/MemberLogin/EditProfile.aspx?LangID=$1" />
+        <!--Rules for RTI Page Link-->
+        <rule source="content/(.+)/RTI/(.+)_(.+)_(.+).aspx" destination="RTI.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;menu_name=$4" />
+        <rule source="RTI/(.+)_(.+)_(.+).aspx" destination="RTI.aspx?menuid=$1&amp;position=$2&amp;menu_name=$3" />
+        <!--End-->
+        <!--Rules for Ombodsman Schedule of Hearing-->
+        <rule source="OmbudsmanContent/(.+)/ScheduleOfHearing/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ScheduleOfHearing.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="Ombudsman/ScheduleOfHearing/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ScheduleOfHearing.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/ScheduleOfHearingPreviousYear/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ScheduleOfHearingPreviousYear.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="Ombudsman/ScheduleOfHearingPreviousYear/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ScheduleOfHearingPreviousYear.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="Ombudsman/ScheduleOfHearingNextYear/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ScheduleOfHearingNext.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/ScheduleOfHearingNextYear/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ScheduleOfHearingNext.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="Ombudsman/ScheduleOfHearingNextYear/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ScheduleOfHearingNext.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/ScheduleOfHearingNextYear/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ScheduleOfHearingNext.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="OmbudsmanContent/(.+)/OmbudsmanSearchSOH/(.+)_(.+)_(.+).aspx" destination="Ombudsman/OmbudsmanSearchSOH.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="Ombudsman/OmbudsmanSearchSOH/(.+)_(.+)_(.+).aspx" destination="Ombudsman/OmbudsmanSearchSOH.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <!--End-->
+        <!-- TOP LINKS MENU URL FOR Ombudsman-->
+        <rule source="OmbudsmanContent/(.+)/CommissionCalendar/(.+)_(.+)_(.+).aspx" destination="Ombudsman/CommissionCalender.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;menu_name=$4" />
+        <rule source="CommissionCalendar/(.+)_(.+)_(.+).aspx" destination="Ombudsman/CommissionCalender.aspx?menuid=$1&amp;position=$2&amp;menu_name=$3" />
+        <!-- END OF TOP LINKS -->
+        <!--Rules for Appeal Page Link-->
+        <rule source="OmbudsmanContent/(.+)/appeal/(.+)_(.+)_(.+).aspx" destination="Ombudsman/appeal.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="appeal/(.+)_(.+)_(.+).aspx" destination="Ombudsman/appeal.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/AppealPreYear/(.+)_(.+)_(.+).aspx" destination="Ombudsman/appealprevious.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="AppealPreYear/(.+)_(.+)_(.+).aspx" destination="Ombudsman/appealprevious.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/Appealsearch/(.+)_(.+)_(.+).aspx" destination="Ombudsman/appealsearch.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="Appealsearch/(.+)_(.+)_(.+).aspx" destination="Ombudsman/appealsearch.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/AppealStatus/(.+)_(.+)_(.+).aspx" destination="Ombudsman/appealonline.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="AppealStatus/(.+)_(.+)_(.+).aspx" destination="Ombudsman/appealonline.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <!--End-->
+        <rule source="OmbudsmanContent/(.+)/ViewRTIOmbudsmanDetails/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ViewRTIOmbudsmanDetails.aspx?LangID=$1&amp;rtiid=$2&amp;menuid=$3&amp;position=$4" />
+        <rule source="ViewRTIOmbudsmanDetails/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ViewRTIOmbudsmanDetails.aspx?rtiid=$1&amp;menuid=$2&amp;position=$3" />
+        <!--Rules for Sitemap-->
+        <rule source="content/(.+)/Sitemap/(.+)_(.+)_(.+).aspx" destination="Sitemap.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="Sitemap/(.+)_(.+)_(.+).aspx" destination="Sitemap.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <!--End-->
+        <!--Tariff Rules-->
+        <rule source="content/(.+)/GenerationTariff/(.+)_(.+)_(.+).aspx" destination="GenerationTariff.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="GenerationTariff/(.+)_(.+)_(.+).aspx" destination="GenerationTariff.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="content/(.+)/Tariff/(.+)_(.+)_(.+).aspx" destination="Tariff.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="Tariff/(.+)_(.+)_(.+).aspx" destination="Tariff.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="content/(.+)/TransmissionCharges/(.+)_(.+)_(.+).aspx" destination="TransmissionCharges.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="TransmissionCharges/(.+)_(.+)_(.+).aspx" destination="TransmissionCharges.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="content/(.+)/WheelingCharges/(.+)_(.+)_(.+).aspx" destination="WheelingCharges.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="WheelingCharges/(.+)_(.+)_(.+).aspx" destination="WheelingCharges.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="content/(.+)/RenewalEnergy/(.+)_(.+)_(.+).aspx" destination="RenewalEnergy.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="RenewalEnergy/(.+)_(.+)_(.+).aspx" destination="RenewalEnergy.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="content/(.+)/Crosssubsidy/(.+)_(.+)_(.+).aspx" destination="Crosssubsidy.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="Crosssubsidy/(.+)_(.+)_(.+).aspx" destination="Crosssubsidy.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="content/(.+)/FSA/(.+)_(.+)_(.+).aspx" destination="FSA.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="FSA/(.+)_(.+)_(.+).aspx" destination="FSA.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="content/(.+)/FsaDetails/(.+)_(.+)_(.+).aspx" destination="FSA_Details.aspx?LangID=$1&amp;id=$2&amp;menuid=$3&amp;position=$4" />
+        <rule source="FsaDetails/(.+)_(.+)_(.+).aspx" destination="FSA_Details.aspx?id=$1&amp;menuid=$2&amp;position=$3" />
+        <rule source="content/(.+)/TariffDetails/(.+)_(.+).aspx" destination="TariffDetails.aspx?LangID=$1&amp;id=$2&amp;catid=$3" />
+        <rule source="TariffDetails/(.+)_(.+).aspx" destination="TariffDetails.aspx?id=$1&amp;catid=$2" />
+        <rule source="content/(.+)/GeneralMiscCharges/(.+)_(.+)_(.+).aspx" destination="GeneralCharges.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="GeneralMiscCharges/(.+)_(.+)_(.+).aspx" destination="GeneralCharges.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <!--End-->
+        <rule source="content/(.+)/Profile/(.+)_(.+)_(.+).aspx" destination="ProfileNew.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="Profile/(.+)_(.+)_(.+).aspx" destination="ProfileNew.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="content/(.+)/profilePrevious/(.+)_(.+)_(.+).aspx" destination="profilePrevious.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="profilePrevious/(.+)_(.+)_(.+).aspx" destination="profilePrevious.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="content/(.+)/ProfileDetail/(.+)_(.+)_(.+)_(.+)_(.+).aspx" destination="ProfileDetail.aspx?LangID=$1&amp;Profile_Id=$2&amp;ModuleID=$3&amp;NavigationId=$4&amp;menuid=$5&amp;position=$6" />
+        <rule source="ProfileDetail/(.+)_(.+)_(.+)_(.+)_(.+).aspx" destination="ProfileDetail.aspx?Profile_Id=$1&amp;ModuleID=$2&amp;NavigationId=$3&amp;menuid=$4&amp;position=$5" />
+        <rule source="content/(.+)/ScreenReader.aspx" destination="ScreenReader.aspx?LangID=$1" />
+        <rule source="OmbudsmanContent/(.+)/Reports/(.+)_(.+)_(.+).aspx" destination="Ombudsman/Reports.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;menu_name=$4" />
+        <rule source="Reports/(.+)_(.+)_(.+).aspx" destination="Ombudsman/Reports.aspx?menuid=$1&amp;position=$2&amp;menu_name=$3" />
+        <rule source="Content/(.+)/ViewDetails.aspx" destination="ViewDetails.aspx?LangID=$1" />
+        <rule source="Content/(.+)/DetailsPage.aspx" destination="DetailsPage.aspx?LangID=$1" />
+        <!-- Profile ombudsman-->
+        <rule source="OmbudsmanContent/(.+)/ProfileOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ProfileCurrent.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="ProfileOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ProfileCurrent.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/ProfilePreviousOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ProfilePrevious.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="ProfilePreviousOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ProfilePrevious.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/ProfileDetailsOmbudsman/(.+)_(.+)_(.+)_(.+)_(.+).aspx" destination="Ombudsman/ProfileDetailsOmbudsman.aspx?LangID=$1&amp;Profile_Id=$2&amp;ModuleID=$3&amp;NavigationId=$4&amp;menuid=$5&amp;position=$6" />
+        <rule source="ProfileDetailsOmbudsman/(.+)_(.+)_(.+)_(.+)_(.+).aspx" destination="Ombudsman/ProfileDetailsOmbudsman.aspx?Profile_Id=$1&amp;ModuleID=$2&amp;NavigationId=$3&amp;menuid=$4&amp;position=$5" />
+        <rule source="OmbudsmanContent/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ContentOmbudsman.aspx?menuid=$1&amp;position=$2&amp;menu_name=$3" />
+        <rule source="OmbudsmanContent/(.+)/(.+)_(.+)_(.+).aspx" destination="Ombudsman/ContentOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;menu_name=$4" />
+        <!--End-->
+        <!-- Tariff ombudsman-->
+        <rule source="OmbudsmanContent/(.+)/GenerationTariffOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/GenerationOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="GenerationTariffOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/GenerationOmbudsman.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/TransmissionTariffOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/TransmissionOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="TransmissionTariffOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/TransmissionOmbudsman.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/WheelingTariffOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/WheelingOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="WheelingTariffOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/WheelingOmbudsman.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/DistributionTariffOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/DistributionOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="DistributionTariffOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/DistributionOmbudsman.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/CrosssubsidyOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/CrosssubsidyOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="CrosssubsidyOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/CrosssubsidyOmbudsman.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/RenewalEnergyOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/RenewalEnergyOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="RenewalEnergyOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/RenewalEnergyOmbudsman.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/FSAOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/FSAOmbudsman.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;name=$4" />
+        <rule source="FSAOmbudsman/(.+)_(.+)_(.+).aspx" destination="Ombudsman/FSAOmbudsman.aspx?menuid=$1&amp;position=$2&amp;name=$3" />
+        <rule source="OmbudsmanContent/(.+)/ReportsDetails/(.+)_(.+)_(.+)_(.+).aspx" destination="Ombudsman/ReportsDetails.aspx?LangID=$1&amp;id=$2&amp;catid=$3&amp;menuid=$4&amp;position=$5" />
+        <rule source="ReportsDetails/(.+)_(.+)_(.+)_(.+).aspx" destination="Ombudsman/ReportsDetails.aspx?id=$1&amp;catid=$2&amp;menuid=$3&amp;position=$4" />
+        <rule source="OmbudsmanContent/(.+)/OmbudsmanWhatsNew.aspx" destination="Ombudsman/OmbudsmanWhatsNew.aspx?LangID=$1" />
+        <rule source="OmbudsmanWhatsNew.aspx" destination="Ombudsman/OmbudsmanWhatsNew.aspx" />
+        <rule source="OmbudsmanContent/(.+)/ViewDetailsWhatsNew.aspx" destination="Ombudsman/ViewDetailsWhatsNew.aspx?LangID=$1" />
+        <rule source="ViewDetailsWhatsNew.aspx" destination="Ombudsman/ViewDetailsWhatsNew.aspx" />
+        <!-- END OF ombudsman -->
+        <!-- TOP LINKS MENU URL-->
+        <rule source="content/(.+)/(.+)_(.+)_(.+).aspx" destination="ContentPage.aspx?LangID=$1&amp;menuid=$2&amp;position=$3&amp;menu_name=$4" />
+        <rule source="content/(.+)_(.+)_(.+).aspx" destination="ContentPage.aspx?menuid=$1&amp;position=$2&amp;menu_name=$3" />
+        <!-- END OF TOP LINKS -->
+        <!--Order Under Appeal-->
+        <rule source="Content/(.+)/OrderUnderAppeal.aspx" destination="OrderUnderAppeal.aspx?LangID=$1" />
+        <rule source="OrderUnderAppeal.aspx" destination="OrderUnderAppeal.aspx" />
+        <rule source="Content/(.+)/CurrentAppealPetition.aspx" destination="CurrentAppealPetition.aspx?LangID=$1" />
+        <rule source="Content/(.+)/CurrentReviewPetition.aspx" destination="CurrentReviewPetition.aspx?LangID=$1" />
+        <rule source="Content/(.+)/PreviousAppeal.aspx" destination="PreviousAppeal.aspx?LangID=$1" />
+        <rule source="Content/(.+)/PreviousReview.aspx" destination="PreviousReview.aspx?LangID=$1" />
+        <!--End-->
+      </rewriteRules>
+    </rewriteModule>
+  </modulesSection>
+  <system.codedom>
+    <compilers>
+      <compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CSharp.CSharpCodeProvider,System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" warningLevel="4">
+        <providerOption name="CompilerVersion" value="v3.5" />
+        <providerOption name="WarnAsError" value="false" />
+      </compiler>
+      <compiler language="vb;vbs;visualbasic;vbscript" extension=".vb" type="Microsoft.VisualBasic.VBCodeProvider, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" warningLevel="4">
+        <providerOption name="CompilerVersion" value="v3.5" />
+        <providerOption name="OptionInfer" value="true" />
+        <providerOption name="WarnAsError" value="false" />
+      </compiler>
+    </compilers>
+  </system.codedom>
+  <system.webServer>
+    <httpProtocol>
+      <customHeaders>
+        <add name="X-Frame-Options" value="SAMEORIGIN" />
+        <add name="X-XSS-Protection" value="1; mode=block" />
+        <add name="X-Content-Type-Options" value="nosniff" />
+        <add name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains" />
+        <remove name="X-Powered-By" />
+		 <remove name="X-AspNet-Version" />
+      <remove name="X-AspNetMvc-Version" />
+      <remove name="X-Powered-By" />
+                <add name="access-control-allow-origin" value="https://herc.gov.in/auth/adminpanel" />
+      </customHeaders>
+    </httpProtocol>
+	
+	
+	<httpErrors existingResponse="Replace" errorMode="Custom">
+      <remove statusCode="404" subStatusCode="-1" />
+      <remove statusCode="403" subStatusCode="-1" />
+	  <remove statusCode="500" subStatusCode="-1" />
+	  <remove statusCode="401" subStatusCode="-1" />
+      <error statusCode="404" path="https://herc.gov.in/Error_Page.aspx" responseMode="Redirect" />
+	  <error statusCode="401" path="https://herc.gov.in/Error_Page.aspx" responseMode="Redirect" />
+      <error statusCode="407" path="https://herc.gov.in/Error_Page.aspx" responseMode="Redirect" />
+	  <error statusCode="500" path="https://herc.gov.in/Error_Page.aspx" responseMode="Redirect" />
+    </httpErrors>
+	
+	
+	
+	<rewrite>
+            <outboundRules>
+                <rule name="Strip Headers" enabled="true">
+                    <match serverVariable="RESPONSE_SERVER" pattern=".*" />
+                    <action type="Rewrite" value="MyServer" replace="true" />
+                    <conditions>
+                    </conditions>
+                </rule>
+            </outboundRules>
+        </rewrite>
+	
+	
+    <rewrite>
+      <rules>
+        <rule name="Prevent hotlinking" enabled="true">
+          <match url=".*fckeditor.*" ignoreCase="true" />
+          <conditions>
+            <!-- http://herc.gov.in/fckeditor/fckstyles.xml -->
+            <!-- <add input="{HTTP_REFERER}" pattern="^http://(.*\.)?myurl\.com/.*$" negate="true" /> -->
+            <add input="{HTTP_REFERER}" pattern="^https://herc.gov.in/.*$" negate="true" />
+            <!--<add input="{HTTP_REFERER}" pattern="^https://herc.nic.in/.*$" negate="true" /> -->
+            <add input="{HTTP_REFERER}" pattern="^https://www.herc.gov.in/.*$" negate="true" />
+            <!--<add input="{HTTP_REFERER}" pattern="^https://www.herc.nic.in/.*$" negate="true" /> -->
+            <!--<add input="{HTTP_REFERER}" pattern="^https://164.100.164.51/.*$" negate="true" /> -->
+          </conditions>
+          <action type="Rewrite" url="/Error_Page.aspx" />
+        </rule>
+        <rule name="Convert to lower case" enabled="true" stopProcessing="true">
+          <match url=".*[A-Z].*" ignoreCase="false" />
+          <action type="Redirect" url="{ToLower:{R:0}}" redirectType="Permanent" />
+        </rule>
+        <rule name="Remove trailing slash" enabled="true" stopProcessing="true">
+          <match url="(.*)/$" />
+          <conditions>
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+          </conditions>
+          <action type="Redirect" redirectType="Permanent" url="{R:1}" />
+        </rule>
+        <!--<rule name="WWW Rewrite" enabled="true">  
+          <match url="(.*)" />  
+          <conditions>  
+            <add input="{HTTP_HOST}" negate="true"  
+            pattern="^www\.([.a-zA-Z0-9]+)$" />  
+          </conditions>  
+          <action type="Redirect" url="https://www.{HTTP_HOST}/{R:0}"  
+            appendQueryString="true" redirectType="Permanent" />  
+          </rule>-->
+      </rules>
+      <rewriteMaps>
+        <rewriteMap name="MapProtocol">
+          <add key="on" value="https" />
+          <add key="off" value="http" />
+        </rewriteMap>
+      </rewriteMaps>
+    </rewrite>
+    <validation validateIntegratedModeConfiguration="false" />
+    <modules>
+      <remove name="ScriptModule" />
+      <add name="ScriptModule" preCondition="managedHandler" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add name="rewriteModule" type="RewriteModule.RewriteModule, RewriteModule" />
+    </modules>
+    <handlers>
+      <remove name="WebServiceHandlerFactory-Integrated" />
+      <remove name="ScriptHandlerFactory" />
+      <remove name="ScriptHandlerFactoryAppServices" />
+      <remove name="ScriptResource" />
+            <add name="htmlhandler" path="*.html" verb="*" type="System.Web.UI.PageHandlerFactory" resourceType="File" preCondition="integratedMode" />
+      <add name="ScriptHandlerFactory" verb="*" path="*.asmx" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add name="ScriptHandlerFactoryAppServices" verb="*" path="*_AppService.axd" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add name="ScriptResource" verb="GET,HEAD" path="ScriptResource.axd" preCondition="integratedMode" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add name="ncmcaptcha" verb="*" path="CaptchaImage.axd" type="ncmcaptcha.CaptchaImageHandler,       ncmcaptcha" />
+      <add name="CaptchaAudio" verb="*" path="CaptchaAudio.axd" type="ncmcaptcha.CaptchaAudioHandler, ncmcaptcha" />
+    </handlers>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding appliesTo="v2.0.50727" xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Extensions" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Extensions.Design" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <system.webServer>
+    <defaultDocument>
+      <files>
+                <remove value="default.aspx" />
+                <remove value="iisstart.htm" />
+                <remove value="index.html" />
+                <remove value="index.htm" />
+                <remove value="Default.asp" />
+                <remove value="Default.htm" />
+        <add value="index.aspx" />
+      </files>
+    </defaultDocument>
+  </system.webServer>
+  <system.net>
+    <defaultProxy>
+      <proxy usesystemdefault="false" />
+    </defaultProxy>
+  </system.net>
+</configuration>

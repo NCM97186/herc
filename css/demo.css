@@ -1,0 +1,27 @@
+.scroll-text {
+
+  width: 400px;
+  height: 10.5em;
+  overflow: hidden;
+}
+.scroll-text ul {
+  
+  /*height: 200px;*/
+  overflow: hidden;
+  
+}
+.scroll-text ul li {
+	display:block;
+	clear:both;
+  margin-left:7px;
+ 
+  clear:both !important;
+  list-style:none;
+  padding:3px 0 3px 15px;
+  background:url(../images/list-icon.png) left 10px no-repeat;
+}
+
+ul#vertical-ticker {
+    height: 200px;
+    overflow: hidden;
+}

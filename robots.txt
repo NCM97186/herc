@@ -1,0 +1,14 @@
+# All robots allowed
+User-agent: *
+Disallow: /*format=Print$
+Disallow: /auth/
+Disallow: /orders/
+Disallow: /documents/
+Disallow: /mainpages/
+Disallow: /shearing/
+Disallow: /old_website/
+Disallow: /public_notice/
+Disallow: /licensees/
+
+# Sitemap files
+Sitemap: https://herc.gov.in/sitemap.xml

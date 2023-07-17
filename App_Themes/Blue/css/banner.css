@@ -1,0 +1,144 @@
+
+.featureImage { 
+	/*color:#fff !important; */
+	position:absolute; 
+	top:0; 
+	left:0;
+}
+.featureImage a { 
+	text-decoration:none;
+}
+
+.featureImage a h2 { 
+	color: #4f81bc;
+	margin: 5px 5px 5px 120px;
+	font-weight: bold;
+	font-size:95%;
+	float:left; 
+	cursor:pointer;
+	display:block;
+}
+
+/*.featureImage span { color: #010101; cursor: pointer; float: left; font-size: 80%; margin-left: 120px; margin-right: 8px; display:block;}*/
+
+.featureText a { 
+	color: #559BC1 !important;
+}
+
+.featureIndexDots { 
+	position:absolute; 
+	left:10px; 
+	text-align:right; 
+	z-index:9999;
+	bottom:0px;
+}
+
+
+.featureIndexDots ul {
+	list-style:none;
+	margin:0; 
+	padding:2px 0;
+}
+
+.featureIndexDots li {
+	display:inline;
+	margin:1px 0px; 
+}
+
+.featureIndexDots a { 
+	color:#333333 !important; 
+	text-decoration: none !important;
+	font-size: 3.0em;
+}
+
+
+.featureIndexDots .featureIndexOn a {
+	color:#CD1110 !important; 
+	text-decoration: none !important; 
+	outline:none;
+}
+
+
+.featureContentStatic {
+	color: #FFF !important;
+	padding: 20px;
+}
+
+.featureImage1 { 
+	display: block; 
+ 	width:736px;
+ 	height:264px;
+}
+.featureImage2 { 
+	display: none;
+ 	width:736px;
+ 	height:264px;
+}
+
+.featureImage3 { 
+	display: none;
+ 	width:736px;
+ 	height:264px;
+}
+
+
+.featureImage4 {
+	display: none;
+ 	width:736px;
+ 	height:264px;
+}
+
+
+
+.desc_rgt {
+    float: right;
+    height: 144px;
+    width: 609px;
+}
+.img_lft {
+    float: left;
+    height: 144px;
+    margin-right: 6px;
+    width: 116px;
+}
+.desc_rgt span {
+    color: #010101;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 80%;
+    margin-right: 8px;
+	text-align: justify;
+}
+.featureImageArea {
+    background: none repeat scroll 0 0 #ffffff;
+    float: left;
+    height: 264px;
+    overflow: hidden;
+    position: relative;
+ 	width:736px;
+}
+
+.desc_rgt a h2 {
+    color: #010101;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 5px 5px 5px 0;
+    text-decoration: none;
+}
+
+/* Created by Ashish */
+.desc_rgt h2 {
+    color: #010101;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 5px 5px 5px 0;
+    text-decoration: none;
+}
+

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HERC", "http://localhost/HERC", "{D87BFB29-AFFF-44B5-BA20-70CBD0425636}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/HERC"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\Inetpub\wwwroot\HERC\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\HERC\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/HERC"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\Inetpub\wwwroot\HERC\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\HERC\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\..\..\..\..\Inetpub\wwwroot\HERC\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D87BFB29-AFFF-44B5-BA20-70CBD0425636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D87BFB29-AFFF-44B5-BA20-70CBD0425636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

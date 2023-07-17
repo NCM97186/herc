@@ -1,0 +1,199 @@
+@charset "utf-8";
+/* CSS Document */
+
+.nav {
+	width:750px;
+}
+.nav,
+.nav ul{
+     list-style-type:none;
+    margin:0px;
+	font-weight:normal;
+    padding:0px;
+	text-align:center;
+	
+
+}
+
+/*CUSTOMIZATION*/
+/*i have split the code to have the width/height/color separate from the rest of the code*/
+/*COLORS*/
+/*here are some default colors, funky colors used for distinctive visibility*/
+/*i hope that you can handle colors customization on your own :p*/
+
+.nav a {
+    background:#829756;
+    color:#fff;
+	text-decoration:none;
+}
+.nav ul {
+    /*top link persistent background color*/
+}
+.nav a.main {
+    background:transparent;
+	display:block;
+	background:url(../images/sep.png) no-repeat right center;/*so that the top link persistent background works*/
+}
+.nav ul a.main {
+    background:yellow;
+	
+}
+.nav a.main:hover {
+	background:url(../images/nav_orange.png) left top repeat-x;
+}
+.nav .sub ul a {
+    background:#CC6;
+}
+.nav .sub ul a.main {
+    background:yellow;
+}
+.nav .sub ul a.main:hover {
+    background:orange;
+}
+.nav a:hover,
+.nav a:focus,
+.nav a:active{
+    background:orange;
+}
+.nav .sub li a:hover,
+.nav .sub li a:focus,
+.nav .sub li a:active{
+    background:#C93;
+}
+.nav .sub .sub ul a {
+    background:#099;
+color:#fff;
+}
+.nav .sub .sub ul a:hover,
+.nav .sub .sub ul a:focus,
+.nav .sub .sub ul a:active{
+    background:#06F;
+}
+.nav .sub .sub .sub ul a {
+    background:#036;
+}
+.nav .sub .sub .sub ul a:hover,
+.nav .sub .sub .sub ul a:focus,
+.nav .sub .sub .sub ul a:active{
+    background:#006;
+}
+.nav .colored li a {
+background:purple;
+}
+
+
+
+/*HEIGHT*/
+.nav {
+height:21px;/*you could remove this and clear the float differently, but to me this makes the most sense*/
+}
+.nav a {
+padding:.2em 0;/*apply padding to links, to vertically center them, be careful with horizontal padding in IE5, correct width must be maintained*/
+}
+.nav a.main {
+    height:21px;/*needs to be the same as the persistent background trick and so that the sublevels are properly aligned*/
+line-height:1.563em;/*not really necessary, but in this specific case it vertically centers the main link text*/
+overflow:hidden;/*making it more bulletproof*/
+padding:0;/*remove the padding that was applied above*/
+}
+.nav ul {
+padding-top:1.563em;/*persistent background trick*/
+margin-top:-1.563em;/*persistent background trick*/
+}
+.nav ul ul {
+position:relative;/*so that it can be moved top/left*/
+    top:-1.563em;/*this is the sole reason why the main links must have a fixed height*/
+}
+
+
+/*WIDTH (!IMPORTANT)*/
+/*change each width value below, else the dropdown will stop working (:hover will still work in modern browsers because of the opera fix)*/
+/*set the link width here*/
+.nav .link,
+.nav a {
+    width:7.5em;/*same as width*/
+	
+}
+.nav ul li {
+/*force ie8 to float-drop*/
+max-width:7.5em;/*same as width*/
+}
+/*set the sublink left shift width here (same as width)*/
+.nav ul ul {
+/*move the sublinks to the side, so they dont overlap*/
+    left:7.5em;/*same as width*/
+}
+.nav li.reversed ul {/*reverse the direction of sublinks for the last dropdown*/
+	left:auto;
+    right:7.5em;/*same as width*/
+}
+/*add the negative value of "width - 1px" here (because css can't do math)*/
+/*or (width - 0.063em) where 0.063em is 1px on 16px base size*/
+.nav a {
+/*makes the links very thin, so that the sublinks can hide inside the main link*/
+margin-right:-6.748em;/*make this width - 1px*//*or width - 0.063em*/
+}
+
+
+/*Dropper Dropdown*/
+/*supports up to 4 sub-levels in IE5-7, more can be added*/
+/*modern browsers already support any amount of sublevels*/
+/*made by Timo Huovinen*/
+
+.nav li {
+    float:left;/*fixes several IE related bugs, and allows for clearing*/
+}
+.nav ul {
+    float:left;/*necessary for float drop*/
+}
+.nav ul li {
+    clear:left;/*must clear the floated list item inside sublist*/
+}
+.nav a {
+    position:relative;/*needs to have a position, to be above the rest*/
+    display:block;
+	
+}
+.nav a.main {
+    float:left;/*necessary for float drop*/
+margin-top:10000px;/*bring the links back into view*/
+}
+.nav .link,
+.nav .sub {
+margin-top:-10000px;/*hide the links and their containers, opera has low upper limits*/
+}
+.nav ul {
+margin-bottom:-5000px;/*avoid any interaction between the sub's, can be any large size*/
+}
+/*the main trick, removes the negative right-margin and causes float drop*/
+.nav a:hover,
+.nav a:focus,
+.nav a:active{
+    margin-right:0;
+}
+
+/*OPERA fix*/
+.nav ul:hover,
+.nav ul ul:hover {
+    clear:left;/*fix for opera sublinks flickering on :hover*/
+}
+/*background no longer needed*/
+.nav ul ul {
+    background:transparent;
+}
+
+/*the code below is mainly for IE5-7, but it does no harm to normal browsers*/
+/*empty rule to fix occassional IE6 tabbing bug, one of the weirdest bug's i have seen.*/
+a, a:hover, a:active, a:focus {}
+.nav .sub {
+    width:100%;
+}
+
+.link 
+{
+
+	display:block;
+	font-size:75%;
+	color:#6b1f11;
+
+}

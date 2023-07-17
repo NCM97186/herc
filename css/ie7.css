@@ -1,0 +1,6 @@
+
+.search {position:relative; top:-32px;}
+ul#sidebarmenu1 li {list-style-position:inherit!important;}
+
+* {list-style-position:outside!important;}
+.tab-holder .title-head {line-height:15px!important;}

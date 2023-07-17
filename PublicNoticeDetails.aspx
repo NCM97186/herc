@@ -1,0 +1,122 @@
+<%@ Page Language="C#" MasterPageFile="~/UserMaster.master" AutoEventWireup="true"
+    CodeFile="PublicNoticeDetails.aspx.cs" Inherits="PublicNoticeDetails" Title="Public Notice Details"  %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphbreadcrumholder" runat="Server">
+    <div id="BreadcrumDiv" runat="server" class="breadcrum">
+        <div class="breadcrumb-left-holder">
+            <ul>
+                <asp:Literal ID="ltrlBreadcrum" runat="server"> </asp:Literal>
+            </ul>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="contentrightholder" runat="server" ContentPlaceHolderID="cphrightholder">
+    <div class="right-holder">
+        <div class="working-content-holder">
+            <div class="page-had">
+                <div class="page-had-left">
+                </div>
+                <div class="page-had-mid-side">
+                    <h2>
+                        <%=Resources.HercResource.CurrentPublicNotice%></h2>
+                    <div class="page-had-right-side">
+                        <div id="PrintDiv" runat="server" class="print-icon">
+                            <a href="<%=UrlPrint%>?format=Print" target="_blank" title="Print">
+                                <img src="<%=ResolveUrl("~/images/print-icon.png")%>" width="18" height="16" alt="Print"
+                                    title="Print" /></a>
+                                      
+                        </div>
+                        <div id="DlastUpdate" runat="server" class="last-updated">
+                            <strong>
+                                <%=Resources.HercResource.LastUpdated %>:</strong>
+                            <%=lastUpdatedDate %>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-had-right">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="text-holder">
+                <asp:Label ID="lblmsg" runat="server" Visible="false"></asp:Label>
+             
+                <asp:Repeater ID="rptpublicNotice" runat="server" OnItemCommand="rptpublicNotice_ItemCommand"
+                    OnItemDataBound="rptpublicNotice_ItemDataBound" >
+                    <ItemTemplate>
+                        <ul>
+                            <li><strong>
+                                <asp:LinkButton ID="lnkTitle" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Title")%>'
+                                    CommandName="ViewDetails" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "PublicNoticeID") %>'
+                                    ToolTip='<%#Resources.HercResource.ClickHereToViewDetails %>'></asp:LinkButton>
+                            </strong></li>
+                        </ul>
+                    </ItemTemplate>
+                </asp:Repeater>
+            
+                <div class="clear">
+                </div>
+                <div style="float: right;" class="paging">
+                    <asp:Repeater ID="rptPager" runat="server">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lnkPage" runat="server" Text='<%#Eval("Text") %>' CommandArgument='<%# Eval("Value") %>'
+                                Enabled='<%# Eval("Enabled") %>' OnClick="lnkPage_Click"></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="lblPageSize" runat="server"></asp:Label>
+                      <label for="<%=ddlPageSize.ClientID %>">
+                            &nbsp;</label>
+                    <asp:DropDownList ID="ddlPageSize" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPageSize_SelectedIndexChanged">
+                        <asp:ListItem Text="10" Value="10" />
+                        <asp:ListItem Text="20" Value="20" />
+                        <asp:ListItem Text="30" Value="30" />
+                    </asp:DropDownList>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <!--mid-holder-Close-->
+    </div>
+    <div class="clear">
+    </div>
+</asp:Content>
+<asp:Content ID="Content6" runat="server" ContentPlaceHolderID="cphleftholder">
+    <div class="left-holder">
+        <div class="left-nav-holder">
+            <div class="left-nav-had">
+                <div class="left-nav-mid">
+                    <h2>
+                        <%=Resources.HercResource.PublicNotice %>
+                    </h2>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="left-nav-btn">
+                <ul>
+                    <% if (Convert.ToInt16(Resources.HercResource.Lang_Id) == Convert.ToInt16(Module_ID_Enum.Language_ID.English))
+                       { %>
+                    <li><a href='<%=ResolveUrl("~/PublicNoticeDetails.aspx") %>' title="Current Year"
+                        class="current">
+                        <%=Resources.HercResource.CurrentPublicNotice%></a></li>
+                    <li><a href='<%=ResolveUrl("~/publicNoticeOlddetails.aspx") %>' title="Previous Year">
+                        <%=Resources.HercResource.PreviousPublicNotice%>
+                    </a></li>
+                    <% }
+                       else
+                       { %>
+                    <li><a href='<%=ResolveUrl("~/Content/Hindi/PublicNoticeDetails.aspx") %>' class="current">
+                        <%=Resources.HercResource.CurrentPublicNotice%></a></li>
+                    <li><a href='<%=ResolveUrl("~/Content/Hindi/publicNoticeOlddetails.aspx") %>' title="Previous Year">
+                        <%=Resources.HercResource.PreviousPublicNotice%>
+                    </a></li>
+                    <%} %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</asp:Content>
